@@ -1,15 +1,16 @@
-// Ingresar el destino y cotizar la renta de un automovil en las distintas ciudades.
+// La idea del proyecto es una página de renta de autos. 
+//El usuario debe ingresar el destino y  días para poder cotizarlo. 
 
 //ejecuta la funcion "start" para cargar la página y el código de JS
-window.onload = iniciar;
+window.onload = startApp;
 
-function iniciar() {
+function startApp() {
 	var btnCalculator = document.getElementById("btnCalculator");
 	btnCalculator.addEventListener("click", clickBtnCalculator);
 }
 
 function clickBtnCalculator() {
-	//capturo el elemento html
+	//capturo el elemento ingresado en el  html
 	var txtDestination = document.getElementById("txtDestination");
 	//obtengo el valor del elemento html y lo guardo en una variable
 	var destination = txtDestination.value;
@@ -22,6 +23,7 @@ function clickBtnCalculator() {
 	quotation(destination, quantityDay);
 }
 
+//cotiza el precio de alquiler de acuerdo a la ciudad. Las ciudades ya tienen una tarifa preestablecida. 
 function quotation(destination, quantityDay) {
 	priceResult = 0;
 	destinationBsAs = 2500;
