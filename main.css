@@ -1,0 +1,86 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css");
+
+:root {
+    --clr-main: #01184A;
+    --clr-sec: #FD5F00;
+    --clr-third: #FFCE08;
+    --clr-fourth: #1259B8;
+    --cl-fifth: #0FD4C4;
+
+
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+input,
+textarea,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.mainWrapper {
+    display: grid;
+    grid-template-columns: 1fr, 4fr;
+    background-color: var(--clr-main);
+}
+
+aside {
+    padding: 2rem;
+    color: white;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.logoIcon {
+    font-weight: 400;
+    font-size: 1.3 rem;
+}
+
+.mainTitle {
+    color: var(--clr-third);
+}
+
+.textFooter {
+    color: white;
+    font-size: 1rem;
+}
+
+.main {
+    background-color: white;
+    margin: 1rem;
+    margin-left: 0;
+    border-radius: 2rem;
+    padding: 2rem;
+}
+
+.text1 {
+    color: white;
+}

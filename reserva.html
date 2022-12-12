@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--Bootstrap-->
+        <link rel="stylesheet" href="primeraEntrega/Pluggin/bootstrap-5.2.2-dist/css/bootstrap.css">
+        <link rel="stylesheet" href="main.css">
+        <title>Reservas</title>
+    </head>
+
+    <body>
+
+        <div class="wrapper">
+            <aside>
+                <header>
+                    <h1 class="logo-icon"> Travel Rent-Car</h1>
+                </header>
+                <nav>
+                    <ul>
+                        <li>
+                            <a class="btnComeBack" href="./mainh.html"></a>
+                            <button class="btnCategory"><i class="bi bi-arrow-left-square"></i> Volver al Inicio
+                            </button>
+                        </li>
+                        <li>
+                            <a class="btnReservation" href="./reserva.html"></a>
+                            <button class="btnCategory"><i class="bi bi-clipboard-check"></i>Mi reserva </button>
+                        </li>
+                        <li>
+                            <button class="btnCategory"><i class="bi bi-car-front"></i> Modelos disponibles </button>
+                        </li>
+                        <li>
+                            <button class="btnCategory"><i class="bi bi-globe-americas"></i> Top destinos </button>
+                        </li>
+                        <li>
+                            <button class="btnCategory"><i class="bi bi-tags"></i>Ofertas </button>
+                        </li>
+                    </ul>
+                </nav>
+                <main>
+                    <h2 class="mainTitle"> Detalles de tu reserva </h2>
+                    <div class="containerReservation">
+                        <p class="noReservation "> <i class="bi bi-journal-x"></i>No tienes ninguna reserva </p>
+
+                        <div class="containerReservationDetail">
+                            <img src="primeraEntrega/images/auto1.webp" alt="">
+
+                            <div class="reservationCarDetail">
+                                <p>Modelo del auto</p>
+                            </div>
+                            <div class="carReservation">
+                                <p> 5 personas <i class="bi bi-person-check"></i></p>
+                                <p> Licencia de conducir +21<i class="bi bi-person-vcard"></i></p>
+                                <p> A/C<i class="bi bi-snow"></i></p>
+                                <p>Km ilimitados<i class="bi bi-car-front"></i></p>
+                            </div>
+                            <div class="carReservationPrice">
+                                <p>Precio </p>
+                                <p>$....</p>
+                            </div>
+
+                        </div>
+                        <div class="reservationActions">
+                            <div class="actionLeft">
+                                <button class="cleanReservation">Limpiar</button>
+                            </div>
+                            <div class="actionRight">
+                                <div class="totalReservation">
+                                    <p>Total</p>
+                                    <p id="totalAmount">$....</p>
+                                </div>
+                                <button class="reservationActionPayment">Pagar</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </main>
+
+
+
+
+
+                <!--Script de JS-->
+                <script src="/entrega1.js"> </script>
+                <!--script de bootstrap-->
+                <script src="/primeraEntrega/Pluggin/bootstrap-5.2.2-dist/js/bootstrap.js"> </script>
+    </body>
+
+</html>

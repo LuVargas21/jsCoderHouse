@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--Bootstrap-->
+        <link rel="stylesheet" href="primeraEntrega/Pluggin/bootstrap-5.2.2-dist/css/bootstrap.css">
+        <link rel="stylesheet" href="main.css">
+        <title>Travel rent-car</title>
+
+
+    </head>
+
+    <body>
+
+
+        <div class="mainWrapper">
+            <aside>
+                <header>
+                    <h1 class="logoIcon"> Travel Rent-Car</h1>
+                </header>
+                <nav>
+                    <ul>
+                        <li>
+                            <button class="btnCategory"><i class="bi bi-menu-button-wide"></i>Inicio </button>
+                        </li>
+                        <li>
+                            <button class="btnCategory"> <i class="bi bi-file-person"></i>Mi reserva </button>
+                        </li>
+                        <li>
+                            <button class="btnCategory"><i class="bi bi-car-front"></i> Modelos disponibles </button>
+                        </li>
+                        <li>
+                            <button class="btnCategory"><i class="bi bi-globe-americas"></i> Top destinos </button>
+                        </li>
+                        <li>
+                            <button class="btnCategory"><i class="bi bi-tags"></i>Ofertas </button>
+                        </li>
+                    </ul>
+                </nav>
+                <footer>
+                    <p class="textFooter"> Travel Rent Car </p>
+                </footer>
+            </aside>
+            <main>
+                <h2 class="mainTitle"> Tu próximo vehículo de alquiler</h2>
+                <div class="containerCarForm">
+
+                    <h2 class="mainTitle"> Selecciona uno de los destinos para alquilar tu vehículo. </h2>
+                    <br>
+                    <div>
+                        <li class="text1">Buenos Aires</li>
+                        <li class="text1">Córdoba</li>
+                        <li class="text1">Mendoza</li>
+                        <li class="text1">Bariloche</li>
+                    </div>
+                    <br>
+                    <form action="">
+                        <label class="text1"> Ingresa tu destino </label> <input id="txtDestination" type="text"> <br>
+                        <br>
+                        <label class="text1"> Ingresa la cantidad de días </label> <input id="txtDay" type="text"> <br>
+                        <br>
+                        <button id="btnCalculator" type="button">Calcular</button>
+                    </form>
+                    <div>
+                        <label id="priceResult"> </label>
+                    </div>
+                </div>
+                <div class="containerCarProducts">
+                    <div class="containerCar">
+                        <img src="./primeraEntrega/images/360x240_VW_golf.png" alt="">
+                    </div>
+                </div>
+            </main>
+
+        </div>
+
+
+
+        <!--Script de JS-->
+        <script src="/entrega1.js"> </script>
+        <!--script de bootstrap-->
+        <script src="/primeraEntrega/Pluggin/bootstrap-5.2.2-dist/js/bootstrap.js"> </script>
+    </body>
+
+</html>
