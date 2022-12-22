@@ -18,20 +18,29 @@
         <br>
 
 
-        <h2> Selecciona uno de los destinos para alquilar tu vehículo. </h2>
-        <br>
-        <div>
-            <li>Buenos Aires</li>
-            <li>Córdoba</li>
-            <li>Mendoza</li>
-            <li>Bariloche</li>
-        </div>
-        <br>
-        <form action="">
-            <label> Ingresa tu destino </label> <input id="txtDestination" type="text"> <br>
-            <br>
+        <h2> Selecciona el destino para alquilar tu vehículo. </h2>
+
+        <select id="txtDestCountry" type="text" aria-label="Default select example">
+            <option selected>País</option>
+            <option value="destinationArg">Argentina </option>
+            <option value="destinationBrz">Brazil </option>
+            <option value="destinationChl">Chile </option>
+            <option value="destinationUr">Uruguay</option>
+        </select>
+
+        <select id="txtDestCity" type="text" aria-label="Default select example">
+            <option value="destinationArg"></option>
+            <option value="destinationBrz">Brazil </option>
+            <option value="destinationChl">Chile </option>
+            <option value="destinationUr">Uruguay</option>
+        </select>
+
+
+
+      
+         
             <label> Ingresa la cantidad de días </label> <input id="txtDay" type="text"> <br>
-            <br>
+            
             <button id="btnCalculator" type="button">Calcular</button>
         </form>
         <div>
