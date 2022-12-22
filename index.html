@@ -22,6 +22,7 @@
             <header>
                 <h1 class="logoIcon"> Travel Rent-Car</h1>
             </header>
+
             <nav>
                 <ul>
                     <li>
@@ -70,9 +71,22 @@
                         <br>
                         <button id="btnCalculator" type="button">Calcular</button>
                         <div>
-                            <label id="priceResult" class="text1"> el precio es de $  </label>
+                            <label id="priceResult" class="text1"> </label>
+                        </div>
+
+            
+                        <div>
+                            <label for="start" class="text1">Fecha de recogida </label>
+                            <input type="date" id="start" name="trip-start" value="2022-12-22" min="2022-01-01"
+                                max="2023-12-31">
+
+                            <label for="start" class="text1">Fecha de devolución </label>
+                            <input type="date" id="start" name="trip-start" value="2023-12-22" min="2022-01-01"
+                                max="2023-12-31">
+                                <input class="btnDate" type="submit" value="Buscar">
 
                         </div>
+
                     </form>
                 </div>
                 <div class="containerCarProducts">

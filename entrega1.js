@@ -1,73 +1,14 @@
 // La idea del proyecto es una página de renta de autos.
 //El usuario debe ingresar el destino y  días para poder cotizarlo.
 
-//ejecuta la funcion "start" para cargar la página y el código de JS
+//execute the function startApp. Load the page.
 window.onload = startApp;
-
-function startApp() {
-	var btnCalculator = document.getElementById("btnCalculator");
-	btnCalculator.addEventListener("click", clickBtnCalculator);
-}
-
-function clickBtnCalculator() {
-	//capturo el elemento ingresado en el  html
-	var txtDestination = document.getElementById("txtDestination");
-	//obtengo el valor del elemento html y lo guardo en una variable
-	var destination = txtDestination.value;
-
-	var txtDay = document.getElementById("txtDay");
-	var quantityDay = txtDay.value;
-
-	console.log(destination, quantityDay);
-
-	quotation(destination, quantityDay);
-}
-
-//cotiza el precio de alquiler de acuerdo a la ciudad. Las ciudades ya tienen una tarifa preestablecida. 
-
-
-// function quotation(destination, quantityDay) {
-// 	priceResult = 0;
-// 	destinationBsAs = 2500;
-// 	destinationCba = 2300;
-// 	destinationMza = 2700;
-// 	destinationBrc = 3200;
-
-// 	switch (destination) {
-// 		case "Buenos Aires":
-// 			priceResult = destinationBsAs * quantityDay;
-
-// 			break;
-// 		case "Cordoba":
-// 			priceResult = destinationCba * quantityDay;
-
-// 			break;
-// 		case "Mendoza":
-// 			priceResult = destinationMza * quantityDay;
-
-// 			break;
-// 		case "Bariloche":
-// 			priceResult = destinationBrc * quantityDay;
-
-// 			break;
-
-// 		default:
-// 			alert("Por favor, chequea los datos ingresados.");
-// 			break;
-// 	}
-// 	console.log(priceResult);
-// 	document.getElementById("priceResult").innerHTML = priceResult;
-// 	alert(
-// 		"El precio para los días y el destino seleccionado es de" + priceResult
-// 	);
-// }
-
-
 
 // Array of countries and cities
 const countries = [
 	{
-		name: "Argentina", id: 1, 
+		name: "Argentina",
+		id: 1,
 		cities: [
 			{ id: 1, idCountry: 1, name: "Buenos Aires", basePrice: 3200 },
 			{ id: 2, idCountry: 1, name: "Bariloche", basePrice: 3500 },
@@ -76,7 +17,8 @@ const countries = [
 		],
 	},
 	{
-		name: "Brasil", id: 2, 
+		name: "Brasil",
+		id: 2,
 		cities: [
 			{ id: 1, idCountry: 2, name: "Rio de Janeiro", basePrice: 4500 },
 			{ id: 2, idCountry: 2, name: "Sao Paulo", basePrice: 4000 },
@@ -86,7 +28,8 @@ const countries = [
 	},
 
 	{
-		name: "Chile", id:3, 
+		name: "Chile",
+		id: 3,
 		cities: [
 			{ id: 5, idCountry: 3, name: "Santiago de Chile", basePrice: 4000 },
 			{ id: 6, idCountry: 3, name: "Valparaíso", basePrice: 4200 },
@@ -96,7 +39,8 @@ const countries = [
 	},
 
 	{
-		name: "Uruguay", id:4, 
+		name: "Uruguay",
+		id: 4,
 		cities: [
 			{ id: 9, idCountry: 4, name: "Montevideo", basePrice: 3500 },
 			{ id: 10, idCountry: 4, name: "Punta del Este", basePrice: 5500 },
@@ -120,7 +64,6 @@ countries.forEach((country) => {
 
 // Update the city dropdown menu when the country selection changes
 countrySelect.addEventListener("change", (event) => {
-	console.log("psdo")
 	// Clear the city dropdown menu
 	citySelect.innerHTML = '<option value="">Ciudad</option>';
 
@@ -133,9 +76,56 @@ countrySelect.addEventListener("change", (event) => {
 	if (selectedCountry) {
 		selectedCountry.cities.forEach((city) => {
 			const option = document.createElement("option");
-			option.value = city.id ;
+			option.value = city.id;
 			option.text = city.name;
 			citySelect.add(option);
 		});
 	}
 });
+
+function startApp() {
+	var btnCalculator = document.getElementById("btnCalculator");
+	btnCalculator.addEventListener("click", clickBtnCalculator);
+}
+
+function clickBtnCalculator() {
+	//get the  value of element select "country". Storage in a variable
+	var idCountry = countrySelect.value;
+
+	// get the  value of element select "city". Storage in a variable
+	var idCity = citySelect.value; //value of ""select"
+
+	var txtDay = document.getElementById("txtDay");
+	var quantityDay = txtDay.value;
+	var isValid = validateFields(idCity, idCountry, quantityDay);
+	if (isValid) {
+		var quotationResult = quotation(idCountry, idCity, quantityDay);
+		document.getElementById("priceResult").innerHTML = "El precio es de: " + quotationResult;
+	}
+}
+// validates the  input value bigger than 0. 
+function validateFields(idCity, idCountry, quantityDay) {
+	var isValid = true;
+	if (idCity <= 0) {
+		alert("ingrese pais");
+		isValid = false;
+	}
+	return isValid;
+}
+//iterates the array "countries", and compares the selected option with the idCountry.
+//iterates the array "cities" of each country. 
+//When found the idCity compares with the id and acces to the method "basePrice"
+function quotation(idCountry, idCity, quantityDay) {
+	var basePrice = 0;
+	for (let i = 0; i < countries.length; i++) {
+		if (countries[i].id == idCountry) {
+			countries[i].cities.forEach((city) => {
+				if (city.id == idCity) {
+					basePrice = city.basePrice;
+				}
+			});
+		}
+	}
+	var quotation = basePrice * quantityDay;
+	return quotation;
+}
