@@ -22,7 +22,8 @@
 
             <nav class="navbar navbar-expand-lg">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="#">Travel Rent Car</a>
+                    <img src="" alt="">
+                    <a class="navbar-brand" href="index.html" >Travel Rent Car</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
@@ -31,8 +32,8 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#"> <i
-                                        class="bi bi-calendar-check"></i>
+                                <a class="nav-link active" aria-current="page" href="reserva.html"> <i
+                                        class="bi bi-calendar-check"> Mi reserva</i>
 
                                 </a>
                             </li>
@@ -76,14 +77,14 @@
                         <div class="containerMenuCountry col-md-6">
                             <!-- Country dropdown menu -->
                             <label for="country"></label>
-                            <select id="country" name="Country">
+                            <select class= "selection" id="country" name="Country">
                                 <option value="">País</option>
                             </select>
                         </div>
                         <div class="containerMenuCity col-md-6">
                             <!-- City dropdown menu -->
                             <label for="city"></label>
-                            <select id="city" name="city">
+                            <select class= "selection" id="city" name="city">
                                 <option value="">Ciudad</option>
                             </select>
                         </div>
@@ -98,15 +99,18 @@
                         <!--date picker-->
 
                         <div class="row justify-content-center">
-                            <div class="col-lg-3 col-sm-6">
+                            <div class="col-md-6">
                                 <label for="startDate">Fecha de recogida</label>
                                 <input id="startDate" class="form-control" type="date" />
                                 <span id="startDateSelected"></span>
                             </div>
-                            <div class="col-lg-3 col-sm-6">
+                            <div class="col-md-6">
                                 <label for="endDate">Fecha de devolución</label>
                                 <input id="endDate" class="form-control" type="date" />
                                 <span id="endDateSelected"></span>
+                            </div>
+                            <div class="col-12">
+                                <button class="btn btn-primary" type="submit">Enviar</button>
                             </div>
                         </div>
                     </div>
@@ -115,8 +119,7 @@
             </div>
         </main>
 
-
-
+       
 
 
 

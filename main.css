@@ -50,16 +50,22 @@ a {
 
 .navbar-brand {
     font-size: 24px;
+   
 }
 
 .bi {
     color: rgb(0, 0, 0);
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
 }
 
 body {
 
     background-image: url(./primeraEntrega/images/background.jpeg );
 
+}
+.reservationPage {
+    background-image: url(./primeraEntrega/images/backgroundReservas.jpg);
+    background-position: 100%;
 }
 
 .containerBooking {
@@ -83,6 +89,16 @@ body {
     color: #999;
     width: 900px;
 
+}
+
+.containerReservation {
+    padding: 24px 12px;
+    border-radius: 8px;
+    margin: 20px auto;
+    background-color: rgba(255, 255, 255, 80%);
+    box-sizing: content-box;
+    color: #999;
+    width: 900px;
 
 }
 
@@ -91,6 +107,15 @@ body {
     margin-right: auto;
     margin-left: auto;
     margin-bottom: 20px;
+    
+}
+
+.selection {
+
+    padding: 8px 12px;
+    color: #999;
+    border-color: #999;
+    border-radius: 5px;
 }
 
 .containerMenuCity {
@@ -101,15 +126,13 @@ body {
     margin-bottom: 20px;
 }
 
-aside {
-    padding: 2rem;
-    color: white;
-    position: sticky;
-    top: 0;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.btn {
+    margin-top: 5px;
+
+}
+
+.form-control {
+    color: #999;
 }
 
 .logoIcon {
@@ -137,7 +160,6 @@ aside {
 }
 
 
-
 .main {
     background-color: white;
     margin: 1rem;
@@ -155,6 +177,24 @@ aside {
     border-radius: .5rem;
 }
 
-.btnCategory {
-    color: white
+.reservationDetails {
+    width: 30rem;
+    border-radius: 0.6rem;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.headerReservation {
+    background: var(--clr-third);
+    border-radius: 0.6rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.contenReservation {
+    background: var(--clr-main);
+    border-radius: 0.6rem;
+    display: flex;
+    flex-direction: column;
 }
