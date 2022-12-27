@@ -9,7 +9,7 @@
         <!--Bootstrap-->
         <link rel="stylesheet" href="primeraEntrega/Pluggin/bootstrap-5.2.2-dist/css/bootstrap.css">
         <link rel="stylesheet" href="main.css">
-        <title>Travel rent-car</title>
+        <title>Travel Rent Car | Home</title>
 
 
     </head>
@@ -17,90 +17,107 @@
     <body>
 
 
-        <div class="mainWrapper">
 
-            <header>
-                <h1 class="logoIcon"> Travel Rent-Car</h1>
-            </header>
+        <div class="navBar">
 
-            <nav>
-                <ul>
-                    <li>
-                        <button class="btnCategory"><i class="bi bi-menu-button-wide"></i>Inicio </button>
-                    </li>
-                    <li>
-                        <button class="btnCategory"> <i class="bi bi-file-person"></i>Mi reserva </button>
-                    </li>
-                    <li>
-                        <button class="btnCategory"><i class="bi bi-car-front"></i> Modelos disponibles </button>
-                    </li>
-                    <li>
-                        <button class="btnCategory"><i class="bi bi-globe-americas"></i> Top destinos </button>
-                    </li>
-                    <li>
-                        <button class="btnCategory"><i class="bi bi-tags"></i>Ofertas </button>
-                    </li>
-                </ul>
-            </nav>
-            <footer>
-                <p class="textFooter"> Travel Rent Car </p>
-            </footer>
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">Travel Rent Car</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#"> <i
+                                        class="bi bi-calendar-check"></i>
 
-            <main>
-                <h2 class="mainTitle"> Tu próximo vehículo de alquiler</h2>
-                <div class="containerCarForm">
-
-                    <h2 class="mainTitle"> Selecciona uno de los destinos para alquilar tu vehículo. </h2>
-
-                    <form action="">
-
-                        <!-- Country dropdown menu -->
-                        <label for="country"></label>
-                        <select id="country" name="Country">
-                            <option value="">País</option>
-                        </select>
-
-                        <!-- City dropdown menu -->
-                        <label for="city"></label>
-                        <select id="city" name="city">
-                            <option value="">Ciudad</option>
-                        </select>
-
-
-                        <label class="text1"> Ingresa la cantidad de días </label> <input id="txtDay" type="text"> <br>
-                        <br>
-                        <button id="btnCalculator" type="button">Calcular</button>
-                        <div>
-                            <label id="priceResult" class="text1"> </label>
-                        </div>
-
-            
-                        <div>
-                            <label for="start" class="text1">Fecha de recogida </label>
-                            <input type="date" id="start" name="trip-start" value="2022-12-22" min="2022-01-01"
-                                max="2023-12-31">
-
-                            <label for="start" class="text1">Fecha de devolución </label>
-                            <input type="date" id="start" name="trip-start" value="2023-12-22" min="2022-01-01"
-                                max="2023-12-31">
-                                <input class="btnDate" type="submit" value="Buscar">
-
-                        </div>
-
-                    </form>
-                </div>
-                <div class="containerCarProducts">
-                    <div class="containerCar">
-                        <img src="./primeraEntrega/images/360x240_VW_golf.png" alt="">
-                        <div>
-                            <h3></h3>
-
-                        </div>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#"> <i
+                                        class="bi bi-person-check"></i>Mi perfil</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#"> <i
+                                        class="bi bi-car-front"></i>Modelos disponibles</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#"> <i
+                                        class="bi bi-tags"></i>Ofertas</a>
+                            </li>
+                        </ul>
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Buscar</button>
+                        </form>
                     </div>
                 </div>
-            </main>
+            </nav>
+
 
         </div>
+
+        <main>
+
+            <div class="containerBooking">
+                <div class=" mainTitleContainer">
+                    <h2 class="mainTitle"> Tu próximo vehículo de alquiler. </h2>
+                </div>
+
+                <form action="">
+
+
+                    <div class="containerDatePicker  row">
+                        <h2 class="textTitle"> Selecciona uno de los destinos para alquilar tu vehículo. </h2>
+
+                        <div class="containerMenuCountry col-md-6">
+                            <!-- Country dropdown menu -->
+                            <label for="country"></label>
+                            <select id="country" name="Country">
+                                <option value="">País</option>
+                            </select>
+                        </div>
+                        <div class="containerMenuCity col-md-6">
+                            <!-- City dropdown menu -->
+                            <label for="city"></label>
+                            <select id="city" name="city">
+                                <option value="">Ciudad</option>
+                            </select>
+                        </div>
+                        <div class="containerMenuDay">
+                            <label class="text1"> Ingresa la cantidad de días </label> <input id="txtDay" type="text">
+
+                            <button id="btnCalculator" type="button">Calcular</button>
+                            <div>
+                                <label id="priceResult" class="text1"> </label>
+                            </div>
+                        </div>
+                        <!--date picker-->
+
+                        <div class="row justify-content-center">
+                            <div class="col-lg-3 col-sm-6">
+                                <label for="startDate">Fecha de recogida</label>
+                                <input id="startDate" class="form-control" type="date" />
+                                <span id="startDateSelected"></span>
+                            </div>
+                            <div class="col-lg-3 col-sm-6">
+                                <label for="endDate">Fecha de devolución</label>
+                                <input id="endDate" class="form-control" type="date" />
+                                <span id="endDateSelected"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </main>
+
+
+
+
 
 
 

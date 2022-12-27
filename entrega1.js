@@ -100,10 +100,11 @@ function clickBtnCalculator() {
 	var isValid = validateFields(idCity, idCountry, quantityDay);
 	if (isValid) {
 		var quotationResult = quotation(idCountry, idCity, quantityDay);
-		document.getElementById("priceResult").innerHTML = "El precio es de: " + quotationResult;
+		document.getElementById("priceResult").innerHTML =
+			"El precio es de: " + quotationResult;
 	}
 }
-// validates the  input value bigger than 0. 
+// validates the  input value bigger than 0.
 function validateFields(idCity, idCountry, quantityDay) {
 	var isValid = true;
 	if (idCity <= 0) {
@@ -113,7 +114,7 @@ function validateFields(idCity, idCountry, quantityDay) {
 	return isValid;
 }
 //iterates the array "countries", and compares the selected option with the idCountry.
-//iterates the array "cities" of each country. 
+//iterates the array "cities" of each country.
 //When found the idCity compares with the id and acces to the method "basePrice"
 function quotation(idCountry, idCity, quantityDay) {
 	var basePrice = 0;
@@ -129,3 +130,17 @@ function quotation(idCountry, idCity, quantityDay) {
 	var quotation = basePrice * quantityDay;
 	return quotation;
 }
+
+// get the input "dates"
+let startDate = document.getElementById("startDate");
+let endDate = document.getElementById("endDate");
+
+startDate.addEventListener("change", (e) => {
+	let startDateVal = e.target.value;
+	document.getElementById("startDateSelected").innerText = startDateVal;
+});
+
+endDate.addEventListener("change", (e) => {
+	let endDateVal = e.target.value;
+	document.getElementById("endDateSelected").innerText = endDateVal;
+});

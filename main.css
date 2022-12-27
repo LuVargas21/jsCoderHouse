@@ -42,10 +42,63 @@ a {
     text-decoration: none;
 }
 
-.mainWrapper {
+.navBar {
     display: grid;
     grid-template-columns: 1fr, 4fr;
-    background-color: var(--clr-main);
+    background-color: var(--clr-third);
+}
+
+.navbar-brand {
+    font-size: 24px;
+}
+
+.bi {
+    color: rgb(0, 0, 0);
+}
+
+body {
+
+    background-image: url(./primeraEntrega/images/background.jpeg );
+
+}
+
+.containerBooking {
+    padding-top: 15px;
+
+}
+
+.mainTitleContainer {
+    display: flex;
+    padding: auto;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.containerDatePicker {
+    padding: 24px 12px;
+    border-radius: 8px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 80%);
+    box-sizing: content-box;
+    color: #999;
+    width: 900px;
+
+
+}
+
+.containerMenuCountry {
+    padding: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 20px;
+}
+
+.containerMenuCity {
+
+    padding: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 20px;
 }
 
 aside {
@@ -62,17 +115,28 @@ aside {
 .logoIcon {
     font-weight: 400;
     font-size: 1.3 rem;
-    color: #FD5F00
+
 }
 
 .mainTitle {
-    color: var(--clr-third);
+    color: var(--clr-main);
+}
+
+.textTitle {
+    font-size: 20px;
 }
 
 .textFooter {
     color: white;
     font-size: 1rem;
 }
+
+.btn-outline-success {
+    color: white;
+    background-color: var(--clr-main);
+}
+
+
 
 .main {
     background-color: white;
@@ -83,10 +147,14 @@ aside {
 }
 
 .text1 {
-    color: white;
+    color: #999;
 }
 
 .btnDate {
     font-weight: 300;
-    border-radius:.5rem;
+    border-radius: .5rem;
+}
+
+.btnCategory {
+    color: white
 }
