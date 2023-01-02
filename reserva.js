@@ -5,3 +5,24 @@
 // 	console.log(e.target.children[0].children[1].value);
 // })
 
+//execute the function startApp. Load the page.
+window.onload = startApp;
+
+function startApp() {
+
+    console.log('valor variable',  localStorage.getItem('quotation'))
+}
+
+
+
+
+
+
+
+const jsonCars =JSON.parse(cars) 
+
+localStorage.setItem("") 
+function quotationCar (idCity, quotation) {
+    let averageCar =0; 
+    
+}

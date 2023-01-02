@@ -6,6 +6,12 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+        <!--favicon-->
+        <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+        <link rel="manifest" href="favicon_io/site.webmanifest">
+
         <!--Bootstrap-->
         <link rel="stylesheet" href="primeraEntrega/Pluggin/bootstrap-5.2.2-dist/css/bootstrap.css">
         <link rel="stylesheet" href="main.css">
@@ -22,8 +28,8 @@
 
             <nav class="navbar navbar-expand-lg">
                 <div class="container-fluid">
-                    <img src="" alt="">
-                    <a class="navbar-brand" href="index.html" >Travel Rent Car</a>
+                    <img src="./primeraEntrega/images/Logo Turismo Corporativo Azul y blancologo.png" alt="logo mundo">
+                    <a class="navbar-brand" href="index.html">Travel Rent Car</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
@@ -52,7 +58,7 @@
                         </ul>
                         <form class="d-flex" role="search">
                             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                            <button class="btn btn-outline-success" type="submit">Buscar</button>
+                            <button type="button" class="btn btn-outline-primary">Buscar</button>
                         </form>
                     </div>
                 </div>
@@ -77,27 +83,18 @@
                         <div class="containerMenuCountry col-md-6">
                             <!-- Country dropdown menu -->
                             <label for="country"></label>
-                            <select class= "selection" id="country" name="Country">
+                            <select class="selection" id="country" name="Country">
                                 <option value="">País</option>
                             </select>
                         </div>
                         <div class="containerMenuCity col-md-6">
                             <!-- City dropdown menu -->
                             <label for="city"></label>
-                            <select class= "selection" id="city" name="city">
+                            <select class="selection" id="city" name="city">
                                 <option value="">Ciudad</option>
                             </select>
                         </div>
-                        <div class="containerMenuDay">
-                            <label class="text1"> Ingresa la cantidad de días </label> <input id="txtDay" type="text">
-
-                            <button id="btnCalculator" type="button">Calcular</button>
-                            <div>
-                                <label id="priceResult" class="text1"> </label>
-                            </div>
-                        </div>
                         <!--date picker-->
-
                         <div class="row justify-content-center">
                             <div class="col-md-6">
                                 <label for="startDate">Fecha de recogida</label>
@@ -110,16 +107,65 @@
                                 <span id="endDateSelected"></span>
                             </div>
                             <div class="col-12">
-                                <button class="btn btn-primary" type="submit">Enviar</button>
+
+                                <button class="btn btn-primary" id="btnCalculator" type="submit">
+                                    Buscar </button>
+                                <!--<a href="reserva.html" target="_blank">Buscar </a> -->
+
                             </div>
                         </div>
                     </div>
 
                 </form>
             </div>
+
         </main>
 
-       
+        <footer class="footer">
+            <div class="containerFooter">
+                <div class="sectionIconLogo">
+                    <a href="./index.html">
+
+                    </a>
+                    <p> <i class="bi bi-geo"></i> Humberto 1° 650 | Capitalinas | Córdoba </p>
+                </div>
+                <div class="sectionLinks">
+                    <h4>Links</h4>
+                    <ul>
+                        <li><i class="bi bi-chevron-bar-right"></i>Mi reserva</li>
+                        <li><i class="bi bi-chevron-bar-right"></i>Mi perfil</li>
+                        <li><i class="bi bi-chevron-bar-right"></i>Modelos disponibles</li>
+                        <li><i class="bi bi-chevron-bar-right"></i>Ofertas</li>
+                    </ul>
+                </div>
+                <div class="sectionSocialMedia">
+                    <h4>Redes sociales </h4>
+                    <ul>
+                        <li><i class="bi bi-instagram"></i></li>
+                        <li><i class="bi bi-facebook"></i></li>
+
+                    </ul>
+                </div>
+                <div class="sectionContact">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li> <a
+                                href="https://api.whatsapp.com/send/?phone=5493517634798&text&type=phone_number&app_absent=0">
+                                <i class="bi bi-whatsapp">+5493517634798</i></a></li>
+                        <li> <i class="bi bi-envelope-at">
+                                <a href="https://mailto:travelrentcar@gmail.com">travelrentcar@gmail.com</a>
+                            </i>
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sectionCopyRight">
+                <i class="bi bi-c-circle"> Travel Rent Car | TODOS LOS DERECHOS RESERVADOS
+                </i>
+            </div>
+
+        </footer>
 
 
 
