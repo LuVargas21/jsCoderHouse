@@ -40,10 +40,12 @@ ul {
 
 a {
     text-decoration: none;
+    color: black;
 }
 
 .navBar {
     display: grid;
+    flex-flow: row wrap;
     grid-template-columns: 1fr, 4fr;
     background-color: var(--clr-third);
 }
@@ -51,6 +53,12 @@ a {
 .navbar-brand {
     font-size: 24px;
 
+}
+.navbar-brand img {
+    max-width: 100%;
+    height: auto;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .bi {
@@ -63,17 +71,14 @@ a {
     color: white;
     background-color: var(--clr-main);
 }
-
+/* 
 body {
 
     background-image: url(./primeraEntrega/images/background.jpeg );
     background-repeat: no-repeat;
-}
+} */
 
-.reservationPage {
-    background-color: #01184A;
-    background-position: no-repeat;
-}
+
 .containerBooking {
     padding-top: 15px;
 
@@ -174,13 +179,12 @@ body {
 }
 
 .containerFooter {
-    min-height: 45vh;
+    min-height: 200px;
     background-color: rgba(250, 247, 243, 0.53);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-content: center;
-
 }
 
 .sectionCopyRight {
@@ -194,3 +198,16 @@ body {
     padding: 2rem 0;
 
 }
+
+
+.containerUser {
+    width: fit-content;
+    padding: 24px 12px;
+    border-radius: 8px;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 80%);
+    box-sizing: content-box;
+    color: #999;
+  
+}
+

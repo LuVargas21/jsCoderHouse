@@ -1,28 +1,33 @@
-// //de la pagina "RESERVA" tomar los datos y guardarlos en Local Storage.
-// const form = document.querySelector('form')
-// form.addEventListener('submit', (e)=>{
-// 	e.preventDefault()
-// 	console.log(e.target.children[0].children[1].value);
-// })
 
 //execute the function startApp. Load the page.
 window.onload = startApp;
 
 function startApp() {
 
-    console.log('valor variable',  localStorage.getItem('quotation'))
+    console.log('',  localStorage.getItem(''))
 }
 
 
+//Form Validation
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(() => {
+    'use strict'
+  
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    const forms = document.querySelectorAll('.needs-validation')
+  
+    // Loop over them and prevent submission
+    Array.from(forms).forEach(form => {
+      form.addEventListener('submit', event => {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+  
+        form.classList.add('was-validated')
+      }, false)
+    })
+  })()
 
+//creation of class car - arrays of cars 
 
-
-
-
-const jsonCars =JSON.parse(cars) 
-
-localStorage.setItem("") 
-function quotationCar (idCity, quotation) {
-    let averageCar =0; 
-    
-}

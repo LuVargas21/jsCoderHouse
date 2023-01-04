@@ -87,7 +87,7 @@ function startApp() {
 	let btnCalculator = document.getElementById("btnCalculator");
 	btnCalculator.addEventListener("click", clickBtnCalculator);
 }
-
+;
 function clickBtnCalculator() {
 	//get the  value of element select "country". Storage in a variable
 	let idCountry = countrySelect.value;
@@ -102,7 +102,7 @@ function clickBtnCalculator() {
 		document.getElementById("priceResult").innerHTML =
 			"El precio es de: " + quotationResult;
 	}
-}
+};
 
 // validates the  input value bigger than 0.
 function validateFields(idCity, idCountry, quantityDay) {
@@ -112,7 +112,7 @@ function validateFields(idCity, idCountry, quantityDay) {
 		isValid = false;
 	}
 	return isValid;
-}
+};
 //iterates the array "countries", and compares the selected option with the idCountry.
 //iterates the array "cities" of each country.
 //When found the idCity compares with the id and acces to the method "basePrice"
@@ -132,12 +132,11 @@ function quotation(idCountry, idCity, quantityDay) {
 	console.log("paso");
 	localStorage.setItem("quotation", quotation);
 	return quotation;
-}
+};
 
 function getQuantityDays() {
 	let startDateStrValue = startDateElem.value;
 	let endDateStrValue = endDateElem.value;
-
 
 	// Supongamos que hemos seleccionado las fechas de inicio y fin utilizando un datepicker y las hemos almacenado en las variables "startDate" y "endDate"
 
@@ -157,12 +156,12 @@ function getQuantityDays() {
 	let difference = endTime - startTime;
 
 	// Dividimos la diferencia entre la cantidad de milisegundos en un día para obtener la cantidad de días
-	let days = (difference / 86400000) + 1;
+	let days = difference / 86400000 + 1;
 
 	// Mostramos el resultado en la consola
 	console.log(days + " días seleccionados");
 	return days;
-}
+}; 
 
 // get the input "dates"
 let startDateElem = document.getElementById("startDate");
