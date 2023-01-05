@@ -26,83 +26,91 @@
         <div>
             <h2> Ingresa con tu usuario </h2>
         </div>
-        <div>
+        <div class="loginUser">
             <form action="">
-                <ul>
-                    <li>
-                        <label for="name">Nombre</label>
-                        <input type="text" id="userName" name="user_name">
-                    </li>
-                    <li>
-                        <label for="mail">Correo electrónico</label>
-                        <input type="email" id="userMail" name="user_mail">
-                    </li>
-                    <li>
-                        <label for="password">Contraseña</label>
-                        <input type="password" id="passwordUser" name="password-user">
-                    </li>
 
-                    <input class="check-input" type="checkbox" value="" id="checkBox" checked>
-                    <label class="check-label" for="checkBox">
-                        Recordarme
-                    </label>
-                </ul>
-                <button> Ingresar</button>
+                <div>
+                    <label for="name">Nombre</label>
+                    <input type="text" id="loguin_name" name="user_name">
+                </div>
+                <div>
+                    <label for="mail">Correo electrónico</label>
+                    <input type="email" id="login_mail" name="user_mail">
+                </div>
+                <div>
+                    <label for="password">Contraseña</label>
+                    <input type="password" id="login_password" name="password-user">
+                </div>
+
+                <input class="check-input" type="checkbox" value="" id="login_checkBox" checked>
+                <label class="check-label" for="checkBox">
+                    Recordarme
+                </label>
+                <div>
+                    <button type="submit" name=" getinto" id="btn_user_login"> Ingresar</button>
+                </div>
+                <p id="message"></p>
+                <div>
+                    <span class="message">No tengo usuario. </span> <a href="registro.html" class="linkRegister">
+                        Registrarme</a> 
+                </div>
             </form>
-            <div>
-                <p>No tengo usuario. <a href="registro.html"> Registrarme</a> </p>
-            </div>
         </div>
+
+
+
+
+        <footer class="footer">
+            <div class="containerFooter">
+                <div class="sectionIconLogo">
+                    <a href="./index.html">
+
+                    </a>
+                    <p> <i class="bi bi-geo"></i> Humberto 1° 650 | Capitalinas | Córdoba </p>
+                </div>
+                <div class="sectionLinks">
+                    <h4>Links</h4>
+                    <ul>
+                        <li><i class="bi bi-chevron-bar-right"></i>Mi reserva</li>
+                        <li><i class="bi bi-chevron-bar-right"></i>Mi perfil</li>
+                        <li><i class="bi bi-chevron-bar-right"></i>Modelos disponibles</li>
+                        <li><i class="bi bi-chevron-bar-right"></i>Ofertas</li>
+                    </ul>
+                </div>
+                <div class="sectionSocialMedia">
+                    <h4>Redes sociales </h4>
+                    <ul>
+                        <li><i class="bi bi-instagram"></i></li>
+                        <li><i class="bi bi-facebook"></i></li>
+
+                    </ul>
+                </div>
+                <div class="sectionContact">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li> <a
+                                href="https://api.whatsapp.com/send/?phone=5493517634798&text&type=phone_number&app_absent=0">
+                                <i class="bi bi-whatsapp">+5493517634798</i></a></li>
+                        <li> <i class="bi bi-envelope-at">
+                                <a href="https://mailto:travelrentcar@gmail.com">travelrentcar@gmail.com</a>
+                            </i>
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sectionCopyRight">
+                <i class="bi bi-c-circle"> Travel Rent Car | TODOS LOS DERECHOS RESERVADOS
+                </i>
+            </div>
+
+        </footer>
+
+
+        <!--Script de JS-->
+        <script src="user.js"> </script>
+        <!--script de bootstrap-->
+        <script src="/primeraEntrega/Pluggin/bootstrap-5.2.2-dist/js/bootstrap.js"> </script>
     </body>
-
-
-
-    <footer class="footer">
-        <div class="containerFooter">
-            <div class="sectionIconLogo">
-                <a href="./index.html">
-
-                </a>
-                <p> <i class="bi bi-geo"></i> Humberto 1° 650 | Capitalinas | Córdoba </p>
-            </div>
-            <div class="sectionLinks">
-                <h4>Links</h4>
-                <ul>
-                    <li><i class="bi bi-chevron-bar-right"></i>Mi reserva</li>
-                    <li><i class="bi bi-chevron-bar-right"></i>Mi perfil</li>
-                    <li><i class="bi bi-chevron-bar-right"></i>Modelos disponibles</li>
-                    <li><i class="bi bi-chevron-bar-right"></i>Ofertas</li>
-                </ul>
-            </div>
-            <div class="sectionSocialMedia">
-                <h4>Redes sociales </h4>
-                <ul>
-                    <li><i class="bi bi-instagram"></i></li>
-                    <li><i class="bi bi-facebook"></i></li>
-
-                </ul>
-            </div>
-            <div class="sectionContact">
-                <h4>Contacto</h4>
-                <ul>
-                    <li> <a
-                            href="https://api.whatsapp.com/send/?phone=5493517634798&text&type=phone_number&app_absent=0">
-                            <i class="bi bi-whatsapp">+5493517634798</i></a></li>
-                    <li> <i class="bi bi-envelope-at">
-                            <a href="https://mailto:travelrentcar@gmail.com">travelrentcar@gmail.com</a>
-                        </i>
-
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="sectionCopyRight">
-            <i class="bi bi-c-circle"> Travel Rent Car | TODOS LOS DERECHOS RESERVADOS
-            </i>
-        </div>
-
-    </footer>
-
-
 
 </html>

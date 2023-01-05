@@ -4,12 +4,13 @@ user_surname = document.querySelector("#surname");
 user_address = document.querySelector("#address");
 user_mail = document.querySelector("#mail");
 user_password = document.querySelector("#password");
+btnRegistrar = document.querySelector("#user_register");
 
 let users;
 if (localStorage.getItem("users")) {
 	users = JSON.parse(localStorage.getItem("users"));
 } else {
-	usuers = [];
+	users = [];
 }
 
 //user builder
@@ -41,11 +42,17 @@ function storeOnLS(elementUser) {
 	return localStorage.setItem("users", JSON.stringify(elementUser));
 }
 
-
 //event
-btnRegistrar.addEventListener("click", (e)=>{
-    e.preventDefault
-   let newUser = new User(user_name.value, user_surname.value, user_mail.value, user_address.value, user_password.value);
-   console.log(newUser);
+btnRegistrar.addEventListener("click", (e) => {
+	e.preventDefault;
+	let newUser = new User(
+		user_name.value,
+		user_surname.value,
+		user_mail.value,
+		user_address.value,
+		user_password.value
+	);
+	console.log(newUser);
+	storeUser(newUser); //va a pushear el user al array
+	storeOnLS(users);
 });
-
