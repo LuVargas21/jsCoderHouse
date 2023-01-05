@@ -1,33 +1,23 @@
+const search = document.querySelector("#searchBox");
+btnSearch = document.querySelector("#search");
+containerCars = document.querySelector(".cars");
+userName = document.querySelector("#userName");
 
-//execute the function startApp. Load the page.
-window.onload = startApp;
+const cars = [];
 
-function startApp() {
-
-    console.log('',  localStorage.getItem(''))
+function arrayCarFilter(filter) {
+	let carFilter = cars.filter((elementCar) => {
+		return elementCar.carName.includes(filter);
+	});
+	return carFilter;
 }
 
+//cuando cree el array al nombre del car le tengo que poner el id carName
 
-//Form Validation
-// Example starter JavaScript for disabling form submissions if there are invalid fields
-(() => {
-    'use strict'
-  
-    // Fetch all the forms we want to apply custom Bootstrap validation styles to
-    const forms = document.querySelectorAll('.needs-validation')
-  
-    // Loop over them and prevent submission
-    Array.from(forms).forEach(form => {
-      form.addEventListener('submit', event => {
-        if (!form.checkValidity()) {
-          event.preventDefault()
-          event.stopPropagation()
-        }
-  
-        form.classList.add('was-validated')
-      }, false)
-    })
-  })()
+//create HTML
+function createHTML(array) {
+	let html;
+}
 
-//creation of class car - arrays of cars 
-
+// call createHTML function
+createHTML(cars);
