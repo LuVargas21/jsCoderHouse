@@ -5,46 +5,100 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+
+
+        <!--favicon-->
+        <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+        <link rel="manifest" href="favicon_io/site.webmanifest">
+
+        <!--fontfamily-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,200;8..144,300;8..144,400&display=swap"
+            rel="stylesheet">
+
+        <!--Bootstrap-->
+        <link rel="stylesheet" href="primeraEntrega/Pluggin/bootstrap-5.2.2-dist/css/bootstrap.css">
+        <link rel="stylesheet" href="register.css">
+        <link rel="stylesheet" href="user.css">
+        <link rel="stylesheet" href="main.css">
+
+
+        <title>Registro de usuario|Travel Rent Car</title>
     </head>
 
     <body>
-        <h1>holaaa!</h1>
+
+        <div class="navBar">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                    <img src="./favicon_io/favicon-32x32.png" alt="logo mundo">
+                    <a class="navbar-brand" href="index.html">Travel Rent Car</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="reserva.html"> <i
+                                        class="bi bi-calendar-check"> Mi reserva</i>
+
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#"> <i
+                                        class="bi bi-person-check"></i>Mi perfil</a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </div>
+            </nav>
+        </div>
 
 
 
 
 
         <!--formulario de registro-->
-        <div class="register">
-            <form action="">
-                <div>
 
-                    <label for="user_name">Nombre</label>
-                    <input type="text" id="name" name="user_name">
-                </div>
+        <form action="" class="formRegister">
+            <div class="formContainer">
                 <div>
-                    <label for="user_surname">Apellido</label>
-                    <input type="text" id="surname" name="user_surname">
+                    <h2 class="registerTitle">Completa el formulario y registrate.</h2>
                 </div>
-                <div>
+                <div class="formGroup">
+                    <label for="user_name" class="formLabel">Nombre</label>
+                    <input type="text" class="formInput" id="name" name="user_name" placeholder=" ">
+                </div>
+                <div class="formGroup">
+                    <label for="user_surname" class="formLabel">Apellido</label>
+                    <input type="text" class="formInput" id="surname" name="user_surname" placeholder=" ">
+                </div>
+                <div class="formGroup">
+                    <label for="user_address" class="formLabel">Dirección</label>
+                    <input type="text" class="formInput" id="address" name="user_address" placeholder=" ">
+                </div>
+                <div class="formGroup">
+                    <label for="user_mail" class="formLabel">Correo electrónico</label>
+                    <input type="email" class="formInput" id="mail" name="user_mail">
+                </div>
+                <div class="formGroup">
+                    <label for="user_password" class="formLabel">Contraseña</label>
+                    <input type="password" class="formInput" id="password" name="user_password"
+                        autocomplete="new-password">
+                </div>
 
-                    <label for="user_address">Dirección</label>
-                    <input type="text" id="address" name="user_address">
-                </div>
-                <div>
-                    <label for="user_mail">Correo electrónico</label>
-                    <input type="email" id="mail" name="user_mail">
-                </div>
-                <div>
-                    <label for="user_password">Contraseña</label>
-                    <input type="password" id="password" name="user_password" autocomplete="new-password">
-                </div>
-                <div>
-                    <button type="submit" name="register" id="user_register"> Crear Usuario </button>
-                </div>
-            </form>
-        </div>
+                <button type="submit" class="formBtn" name="register" id="user_register"> Crear Usuario </button>
+            </div>
+        </form>
+
 
 
         <!--Script de JS-->

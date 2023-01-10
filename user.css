@@ -1,0 +1,88 @@
+ @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,200;8..144,300;8..144,400&display=swap');
+
+ body {
+     font-family: 'Roboto Flex', sans-serif;
+     background-color: rgba(255, 255, 255, 0);
+     opacity: 1;
+     background-image: radial-gradient(#01184A 0.8500000000000001px, transparent 0.8500000000000001px), radial-gradient(#01184A 0.8500000000000001px, rgba(255, 255, 255, 0) 0.8500000000000001px);
+     background-size: 34px 34px;
+     background-position: 0 0, 17px 17px;
+ }
+
+ .form {
+     background-color: white;
+     margin: auto;
+     width: 90%;
+     max-width: 400px;
+     margin-top:  20px ;
+     padding: 30px 30px;
+     border-radius: 8px;
+     box-shadow: 0 5px 10px -5px rgb(0 0 0/30%);
+     text-align: center;
+ }
+
+ .fomrTitle {
+     font-size: rem;
+     margin-bottom: .5em;
+     color: #01184A;
+ }
+
+ .message {
+     font-weight: 400;
+     color: #01184A;
+ }
+
+ .linkRegister {
+     font-weight: 400;
+     color: #01184A
+ }
+
+ .formContainer {
+     margin-top: 3em;
+     display: grid;
+     gap: 2.5em;
+     color: #01184A;
+ }
+
+ .formGroup {
+     position: relative;
+     color: #01184A;
+ }
+
+ .formInput {
+     width: 100%;
+     background: white;
+     color: #01184A;
+     font-size: 1rem;
+     padding: 6.em 3.em;
+     border: none;
+     outline: none;
+     border-bottom: 1px solid #01184A;
+
+ }
+
+
+ .fomrLabel {
+     color: #01184A;
+     cursor: pointer;
+     position: absolute;
+     top: 0;
+     left: 5px;
+     transform: translateY(10px);
+     transition: transform .5s, color .3s;
+
+ }
+
+ .formBtn {
+    background-color: #01184A;
+    color: white;
+    font-family: 'Roboto Flex', sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    padding: .8em 0;
+    border: none;
+    border-radius: .5em;
+ }
+ .formMessage{
+    padding: 5px;
+ }

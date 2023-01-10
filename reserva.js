@@ -1,7 +1,6 @@
-const search = document.querySelector("#searchBox");
-btnSearch = document.querySelector("#search");
-containerCars = document.querySelector(".cars");
-userName = document.querySelector("#userName");
+const search = document.getElementById("input-text-find"),
+	btnSearch = document.getElementById("btn-find"),
+	containerCars = document.querySelector(".cars");
 
 const cars = [
 	{
@@ -36,7 +35,7 @@ const cars = [
 		model: "March",
 		brand: "Nissan",
 		motor: "1.6",
-		category: "Intermedio",
+		category: "Economic",
 		img: "",
 		price: "",
 	},
@@ -151,6 +150,7 @@ const cars = [
 	},
 ];
 
+//filter cars
 function arrayCarFilter(filter) {
 	let carFilter = cars.filter((elementCar) => {
 		return elementCar.model.includes(filter);
@@ -158,32 +158,33 @@ function arrayCarFilter(filter) {
 	return carFilter;
 }
 
-//cuando cree el array al nombre del car le tengo que poner el id carName
-
 //create HTML
 function createHTML(array) {
 	let html;
+	containerCars.innerHTML = "";
 	for (const car of array) {
-		html = (
-			<div class="card-container">
+		html = `<div class="card-container">
 				<div class="card">
-					<div class="card-image">
-						<img src="../img/reserva/${car.image}" alt="">
-							{" "}
-						</img>
-						<span class="card-title">${car.model.toUpperCase()}</span>
+					<div class="card-image">	
+					<img src="../primeraEntrega/images/${car.image}" alt=""> 
+					<span class="card-title">${car.model}</span>
+						
 					</div>
 					<div class="card-content">
-						<p>${car.price}</p>
+					    <p class ="card-text">${car.brand}</p>
+					    <p class ="card-text">${car.category}</p>
+						<p class="card-text" >${car.price}</p>		
 					</div>
+					
 					<div class="card-action">
-						<button class="btn-card" id="${cars.id}">
+						<button type="button" class=" btn btn-card" id="${cars.id}">
 							Reservar
 						</button>
 					</div>
+					
 				</div>
-			</div>
-		);
+			</div>`;
+		containerCars.innerHTML += html;
 	}
 }
 
@@ -191,3 +192,14 @@ function createHTML(array) {
 createHTML(cars);
 
 //listener search
+
+btnSearch.addEventListener("click", (e) => {
+	e.preventDefault();
+	let filterElement = arrayCarFilter(search.value);
+	console.log(filterElement);
+	createHTML(filterElement);
+});
+
+function clickBtnCalculator() {
+
+};

@@ -13,52 +13,103 @@
         <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
         <link rel="manifest" href="favicon_io/site.webmanifest">
 
+        <!--fontfamily-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,200;8..144,300;8..144,400&display=swap"
+            rel="stylesheet">
+
         <!--Bootstrap-->
         <link rel="stylesheet" href="primeraEntrega/Pluggin/bootstrap-5.2.2-dist/css/bootstrap.css">
+        <link rel="stylesheet" href="user.css">
         <link rel="stylesheet" href="main.css">
 
 
-        <title>Registro de usuario|Travel Rent Car</title>
+        <title>Ingreso de usuario|Travel Rent Car</title>
     </head>
 
     <body>
+
+
+        <div class="navBar">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                    <img src="./favicon_io/favicon-32x32.png" alt="logo mundo">
+                    <a class="navbar-brand" href="index.html">Travel Rent Car</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="reserva.html"> <i
+                                        class="bi bi-calendar-check"> Mi reserva</i>
+
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#"> <i
+                                        class="bi bi-person-check"></i>Mi perfil</a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+
+
+
+
+
         <!--formulario de usuario registrado-->
-        <div>
-            <h2> Ingresa con tu usuario </h2>
-        </div>
-        <div class="loginUser">
-            <form action="">
-
-                <div>
-                    <label for="name">Nombre</label>
-                    <input type="text" id="loguin_name" name="user_name">
-                </div>
-                <div>
-                    <label for="mail">Correo electrónico</label>
-                    <input type="email" id="login_mail" name="user_mail">
-                </div>
-                <div>
-                    <label for="password">Contraseña</label>
-                    <input type="password" id="login_password" name="password-user">
-                </div>
-
-                <input class="check-input" type="checkbox" value="" id="login_checkBox" checked>
-                <label class="check-label" for="checkBox">
-                    Recordarme
-                </label>
-                <div>
-                    <button type="submit" name=" getinto" id="btn_user_login"> Ingresar</button>
-                </div>
-                <p id="message"></p>
-                <div>
-                    <span class="message">No tengo usuario. </span> <a href="registro.html" class="linkRegister">
-                        Registrarme</a> 
-                </div>
-            </form>
-        </div>
 
 
+        <form class="form">
+            <div class="formContainer">
+                <div>
+                    <h2 class="formTitle"> Ingresa con tu usuario </h2>
+                </div>
+                <div class="formGroup">
+                    <label for="name" class="formLabel">Nombre</label>
+                    <input type="text" class="formInput" id="loguin_name" name="user_name" placeholder=" ">
+                </div>
+                <div class="formGroup">
+                    <label for="mail" class="formLabel">Correo electrónico</label>
+                    <input type="email" class="formInput" id="login_mail" name="user_mail" placeholder=" ">
+                </div>
+                <div class="formGroup">
+                    <label for="password" class="" formLabel>Contraseña</label>
+                    <input type="password" class="formInput" id="login_password" name="password-user" placeholder=" ">
+                </div>
+                <div class="">
+                    <input class="check-input" type="checkbox" value="" id="login_checkBox" checked>
+                    <label class="check-label" for="checkBox">
+                        Recordarme
+                    </label>
+                </div>
 
+                <button type="submit" class="formBtn" name=" getinto" id="btn_user_login">
+                    Ingresar</button>
+
+            </div>
+            <p id="message"></p>
+            <div class="formMessage">
+                <span class="message">No tengo usuario. </span> <a href="registro.html" class="linkRegister">
+                    Registrarme</a>
+            </div>
+
+        </form>
+
+
+
+
+        <!--
 
         <footer class="footer">
             <div class="containerFooter">
@@ -105,10 +156,12 @@
             </div>
 
         </footer>
-
+ -->
 
         <!--Script de JS-->
         <script src="user.js"> </script>
+        <script src="reserva.js"></script>
+
         <!--script de bootstrap-->
         <script src="/primeraEntrega/Pluggin/bootstrap-5.2.2-dist/js/bootstrap.js"> </script>
     </body>

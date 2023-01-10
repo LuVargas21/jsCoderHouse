@@ -54,6 +54,7 @@ a {
     font-size: 24px;
 
 }
+
 .navbar-brand img {
     max-width: 100%;
     height: auto;
@@ -71,6 +72,7 @@ a {
     color: white;
     background-color: var(--clr-main);
 }
+
 /* 
 body {
 
@@ -81,6 +83,7 @@ body {
 
 .containerBooking {
     padding-top: 15px;
+    align-items: center;
 
 }
 
@@ -92,13 +95,13 @@ body {
 }
 
 .containerDatePicker {
+    align-items: center;
     padding: 24px 12px;
     border-radius: 8px;
-    margin: 0 auto;
-    background-color: rgba(255, 255, 255, 80%);
+    background-color: rgb(1, 24, 74);
     box-sizing: content-box;
     color: #999;
-    width: 900px;
+    width: fit-content;
 
 }
 
@@ -208,6 +211,5 @@ body {
     background-color: rgba(255, 255, 255, 80%);
     box-sizing: content-box;
     color: #999;
-  
-}
 
+}

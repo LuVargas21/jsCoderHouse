@@ -12,11 +12,18 @@
         <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
         <link rel="manifest" href="favicon_io/site.webmanifest">
 
+        <!--fontfamily-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,200;8..144,300;8..144,400&display=swap"
+            rel="stylesheet">
         <!--Bootstrap-->
-
-        <link rel="stylesheet" href="primeraEntrega/Pluggin/bootstrap-5.2.2-dist/css/bootstrap.css">
         <link rel="stylesheet" href="./CSS/reserva.css">
+        <link rel="stylesheet" href="primeraEntrega/Pluggin/bootstrap-5.2.2-dist/css/bootstrap.css">
         <link rel="stylesheet" href="main.css">
+
+
         <title> Travel Rent Car | Reservas</title>
     </head>
 
@@ -29,9 +36,7 @@
 
             <nav class="navbar navbar-expand-lg">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="index.html"> <img
-                            src="./primeraEntrega/images/Logo Turismo Corporativo Azul y blancologo.png"
-                            alt="logo mundo">
+                    <a class="navbar-brand" href="index.html"> <img src="favicon_io/favicon-32x32.png" alt="logo mundo">
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -49,18 +54,12 @@
                                 <a class="nav-link active" aria-current="page" href="#"> <i
                                         class="bi bi-person-check"></i>Mi perfil</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#"> <i
-                                        class="bi bi-car-front"></i>Modelos disponibles</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#"> <i
-                                        class="bi bi-tags"></i>Ofertas</a>
-                            </li>
+
                         </ul>
                         <form class="d-flex" role="search">
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                            <button class="btn btn-outline-success" type="submit">Buscar</button>
+                            <input id="input-text-find" class="form-control me-2" type="search" placeholder="Search"
+                                aria-label="Search">
+                            <button id="btn-find" class="btn btn-outline-success" type="submit">Buscar</button>
                         </form>
                     </div>
                 </div>
@@ -76,39 +75,11 @@
         <br>
 
         <!-- autos-->
-        <section class="cars">
+        <section class="cars row row-cols-1 row-cols-md-4 g-4">
             <!--contenido dinamico-->
+
         </section>
 
-        <div class="card-container  row row-cols-1 row-cols-md-2 g-4">
-            <div class="card">
-                <div class="card-image">
-                    <img src="../img/reserva/${car.image}" alt="">
-                    {" "}
-                    </img>
-                    <span class="card-title">${car.model.toUpperCase()}</span>
-                </div>
-                <div class="card-content">
-                    <p>${car.price}</p>
-                </div>
-                <div class="card-action">
-                    <button class="btn-card" id="${cars.id}">
-                        Reservar
-                    </button>
-                </div>
-            </div>
-
-
-        </div>
-
-
-
-
-
-
-
-
-        <!-- 
         <footer class="footer">
             <div class="containerFooter">
                 <div class="sectionIconLogo">

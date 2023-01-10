@@ -12,9 +12,16 @@
         <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
         <link rel="manifest" href="favicon_io/site.webmanifest">
 
+        <!--fontfamily-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,200;8..144,300;8..144,400&display=swap"
+            rel="stylesheet">
         <!--Bootstrap-->
-        <link rel="stylesheet" href="primeraEntrega/Pluggin/bootstrap-5.2.2-dist/css/bootstrap.css">
         <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="primeraEntrega/Pluggin/bootstrap-5.2.2-dist/css/bootstrap.css">
+
         <title>Travel Rent Car | Home</title>
 
 
@@ -28,7 +35,7 @@
 
             <nav class="navbar navbar-expand-lg">
                 <div class="container-fluid">
-                    <img src="./primeraEntrega/images/Logo Turismo Corporativo Azul y blancologo.png" alt="logo mundo">
+                    <img src="./favicon_io/favicon-32x32.png" alt="logo mundo">
                     <a class="navbar-brand" href="index.html">Travel Rent Car</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -47,19 +54,9 @@
                                 <a class="nav-link active" aria-current="page" href="#"> <i
                                         class="bi bi-person-check"></i>Mi perfil</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#"> <i
-                                        class="bi bi-car-front"></i>Modelos disponibles</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#"> <i
-                                        class="bi bi-tags"></i>Ofertas</a>
-                            </li>
+
                         </ul>
-                        <form class="d-flex" role="search">
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                            <button type="button" class="btn btn-outline-primary">Buscar</button>
-                        </form>
+
                     </div>
                 </div>
             </nav>
@@ -75,46 +72,49 @@
                 </div>
 
                 <form class=""">
-                    <div class="containerDatePicker  row">
-                        <h2 class="textTitle"> Selecciona uno de los destinos para alquilar tu vehículo. </h2>
+                    <div class=" containerDatePicker row">
+                    <h2 class="textTitle"> Selecciona uno de los destinos para alquilar tu vehículo. </h2>
 
-                        <div class="containerMenuCountry col-md-6">
-                            <!-- Country dropdown menu -->
-                            <label for="country"></label>
-                            <select class="selection" id="country" name="Country">
-                                <option value="">País</option>
-                            </select>
+                    <div class="containerMenuCountry col-md-6">
+                        <!-- Country dropdown menu -->
+                        <label for="country"></label>
+                        <select class="selection" id="country" name="Country">
+                            <option value="">País</option>
+                        </select>
+                    </div>
+                    <div class="containerMenuCity col-md-6">
+                        <!-- City dropdown menu -->
+                        <label for="city"></label>
+                        <select class="selection" id="city" name="city">
+                            <option value="">Ciudad</option>
+                        </select>
+                    </div>
+                    <!--date picker-->
+                    <div class="row justify-content-center">
+                        <div class="col-md-6">
+                            <label for="startDate">Fecha de recogida</label>
+                            <input id="startDate" class="form-control" type="date" />
+                            <span id="startDateSelected"></span>
                         </div>
-                        <div class="containerMenuCity col-md-6">
-                            <!-- City dropdown menu -->
-                            <label for="city"></label>
-                            <select class="selection" id="city" name="city">
-                                <option value="">Ciudad</option>
-                            </select>
+                        <div class="col-md-6">
+                            <label for="endDate">Fecha de devolución</label>
+                            <input id="endDate" class="form-control" type="date" />
+                            <span id="endDateSelected"></span>
                         </div>
-                        <!--date picker-->
-                        <div class="row justify-content-center">
-                            <div class="col-md-6">
-                                <label for="startDate">Fecha de recogida</label>
-                                <input id="startDate" class="form-control" type="date" />
-                                <span id="startDateSelected"></span>
-                            </div>
-                            <div class="col-md-6">
-                                <label for="endDate">Fecha de devolución</label>
-                                <input id="endDate" class="form-control" type="date" />
-                                <span id="endDateSelected"></span>
-                            </div>
-                            <div class="col-12">
+                        <div class="col-12">
 
-                                <button class="btn btn-primary" id="btnCalculator" type="submit">
-                                    Buscar </button>
-                                <!--<a href="reserva.html" target="_blank">Buscar </a> -->
+                            <button class="btn btn-primary" id="btnCalculator" type="submit">
+                                Buscar </button>
+                            <!--<a href="reserva.html" target="_blank">Buscar </a> -->
 
-                            </div>
                         </div>
                     </div>
+                    <div>
+                        <label id="priceResult" class="text1"> </label>
+                    </div>
+            </div>
 
-                </form>
+            </form>
             </div>
 
         </main>
