@@ -111,7 +111,7 @@ function clickBtnCalculator() {
 function validateFields(idCity, idCountry, quantityDay) {
 	let isValid = true;
 	if (idCity <= 0) {
-		alert("ingrese pais");
+		// ingresar el sweet alert;
 		isValid = false;
 	}
 	return isValid;
