@@ -102,8 +102,13 @@ function clickBtnCalculator() {
 	let isValid = validateFields(idCity, idCountry, quantityDay);
 	if (isValid) {
 		let quotationResult = quotation(idCountry, idCity, quantityDay);
-		document.getElementById("priceResult").innerHTML =
-			"El precio es de: " + quotationResult;
+		document.getElementById("priceResult").innerHTML = Swal.fire({
+			title: "El precio base para tu destino es de " + quotationResult,
+			icon: "info",
+			html:
+				'<a href="http://127.0.0.1:5500/reserva.html"links</a> ' +
+				"ELEGIR MI AUTO!",
+		});
 	}
 }
 
@@ -111,7 +116,11 @@ function clickBtnCalculator() {
 function validateFields(idCity, idCountry, quantityDay) {
 	let isValid = true;
 	if (idCity <= 0) {
-		// ingresar el sweet alert;
+		Swal.fire(
+			"",
+			"Debes completar todos los campos para poder continuar",
+			"warning"
+		);
 		isValid = false;
 	}
 	return isValid;
@@ -179,3 +188,5 @@ endDateElem.addEventListener("change", (e) => {
 	endDateStrValue = e.target.value;
 	document.getElementById("endDateSelected").innerText = endDateStrValue;
 });
+
+export { quotation };

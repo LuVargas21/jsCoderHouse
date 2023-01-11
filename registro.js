@@ -4,7 +4,7 @@ user_surname = document.querySelector("#surname");
 user_address = document.querySelector("#address");
 user_mail = document.querySelector("#mail");
 user_password = document.querySelector("#password");
-btnRegistrar = document.querySelector("#user_register");
+btnRegistrar = document.querySelector(".user_register");
 
 let users;
 if (localStorage.getItem("users")) {
@@ -56,3 +56,4 @@ btnRegistrar.addEventListener("click", (e) => {
 	storeUser(newUser); //va a pushear el user al array
 	storeOnLS(users);
 });
+

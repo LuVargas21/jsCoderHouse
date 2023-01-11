@@ -9,8 +9,9 @@ const cars = [
 		brand: "Chevrolet ",
 		motor: "1.4",
 		category: "Economic",
-		img: "",
-		price: "",
+		img: "onix_id1.png",
+		price: 7000,
+		finalPrice: "",
 	},
 	{
 		id: 2,
@@ -18,8 +19,9 @@ const cars = [
 		brand: "VW",
 		motor: "1.6",
 		category: "Economic",
-		img: "",
-		price: "",
+		img: "goltrend_id2.jfif",
+		price: 7000,
+		finalPrice: " ",
 	},
 	{
 		id: 3,
@@ -27,8 +29,9 @@ const cars = [
 		brand: "Renault",
 		motor: "1.6",
 		category: "Economic",
-		img: "",
-		price: "",
+		img: "clio_id3.jfif",
+		price: 7000,
+		finalPrice: " ",
 	},
 	{
 		id: 4,
@@ -36,8 +39,9 @@ const cars = [
 		brand: "Nissan",
 		motor: "1.6",
 		category: "Economic",
-		img: "",
-		price: "",
+		img: "march_id4.jfif",
+		price: 7000,
+		finalPrice: " ",
 	},
 	{
 		id: 5,
@@ -45,8 +49,9 @@ const cars = [
 		brand: "Nissan",
 		motor: "1.6",
 		category: "Intermedio",
-		img: "",
-		price: "",
+		img: "versa_id5.jfif",
+		price: 10000,
+		finalPrice: " ",
 	},
 	{
 		id: 6,
@@ -54,8 +59,9 @@ const cars = [
 		brand: "Chevrolet",
 		motor: "1.8",
 		category: "Intermedio",
-		img: "",
-		price: "",
+		img: "cobalt_id6.jfif",
+		price: 10000,
+		finalPrice: " ",
 	},
 	{
 		id: 7,
@@ -63,8 +69,9 @@ const cars = [
 		brand: "Ford",
 		motor: "1.6",
 		category: "Intermedio",
-		img: "",
-		price: "",
+		img: "prisma_id7.jfif",
+		price: 10000,
+		finalPrice: " ",
 	},
 	{
 		id: 8,
@@ -72,8 +79,9 @@ const cars = [
 		brand: "Renault",
 		motor: "2.0",
 		category: "Intermedio",
-		img: "",
-		price: "",
+		img: "duster_id8.jpg",
+		price: 10000,
+		finalPrice: " ",
 	},
 	{
 		id: 9,
@@ -81,8 +89,9 @@ const cars = [
 		brand: "Nissan",
 		motor: "1.6",
 		category: "Premium",
-		img: "",
-		price: "",
+		img: "kicks_id9.jfif",
+		price: 12000,
+		finalPrice: " ",
 	},
 	{
 		id: 10,
@@ -90,8 +99,9 @@ const cars = [
 		brand: "Toyota",
 		motor: "1.6",
 		category: "Premium",
-		img: "",
-		price: "",
+		img: "yaris_id10.jfif",
+		price: 12000,
+		finalPrice: " ",
 	},
 	{
 		id: 11,
@@ -99,8 +109,9 @@ const cars = [
 		brand: "Ford",
 		motor: "2.5",
 		category: "Premium",
-		img: "",
-		price: "",
+		img: "kuga_id11jpg.jpg",
+		price: 12000,
+		finalPrice: " ",
 	},
 	{
 		id: 12,
@@ -108,8 +119,9 @@ const cars = [
 		brand: "VW",
 		motor: "2.0",
 		category: "Premium",
-		img: "",
-		price: "",
+		img: "tiguan_id12.png",
+		price: 12000,
+		finalPrice: " ",
 	},
 	{
 		id: 13,
@@ -117,8 +129,9 @@ const cars = [
 		brand: "Jeep",
 		motor: "1.7",
 		category: "Especial",
-		img: "",
-		price: "",
+		img: "renegade_id13.png",
+		price: 15000,
+		finalPrice: " ",
 	},
 	{
 		id: 14,
@@ -126,8 +139,9 @@ const cars = [
 		brand: "Nissan",
 		motor: "3.8",
 		category: "Especial",
-		img: "",
-		price: "",
+		img: "frontier_id14.jfif",
+		price: 15000,
+		finalPrice: " ",
 	},
 	{
 		id: 15,
@@ -135,8 +149,9 @@ const cars = [
 		brand: "Ford",
 		motor: "2.5",
 		category: "Especial",
-		img: "",
-		price: "",
+		img: "ranger_id15.jfif",
+		price: 15000,
+		finalPrice: " ",
 	},
 
 	{
@@ -145,8 +160,9 @@ const cars = [
 		brand: "VW",
 		motor: "2.5",
 		category: "Especial",
-		img: "",
-		price: "",
+		img: "amarok_id16.jfif",
+		price: 15000,
+		finalPrice: " ",
 	},
 ];
 
@@ -154,6 +170,31 @@ const cars = [
 function arrayCarFilter(filter) {
 	let carFilter = cars.filter((elementCar) => {
 		return elementCar.model.includes(filter);
+	});
+	return carFilter;
+}
+
+function arrayCarFilter(filter) {
+	let carFilter = cars.filter((elementCar) => {
+		return elementCar.category.includes(filter);
+	});
+	return carFilter;
+}
+function arrayCarFilter(filter) {
+	let carFilter = cars.filter((elementCar) => {
+		return elementCar.price.includes(filter);
+	});
+	return carFilter;
+}
+function arrayCarFilter(filter) {
+	let carFilter = cars.filter((elementCar) => {
+		return elementCar.motor.includes(filter);
+	});
+	return carFilter;
+}
+function arrayCarFilter(filter) {
+	let carFilter = cars.filter((elementCar) => {
+		return elementCar.brand.includes(filter);
 	});
 	return carFilter;
 }
@@ -166,14 +207,14 @@ function createHTML(array) {
 		html = `<div class="card-container">
 				<div class="card">
 					<div class="card-image">	
-					<img src="../primeraEntrega/images/${car.image}" alt=""> 
+					<img src="./images-cars/${car.img}" alt=""> 
 					<span class="card-title">${car.model}</span>
 						
 					</div>
 					<div class="card-content">
 					    <p class ="card-text">${car.brand}</p>
 					    <p class ="card-text">${car.category}</p>
-						<p class="card-text" >${car.price}</p>		
+						<p class="card-text" > $${car.price}</p>		
 					</div>
 					
 					<div class="card-action">
@@ -200,6 +241,6 @@ btnSearch.addEventListener("click", (e) => {
 	createHTML(filterElement);
 });
 
-function clickBtnCalculator() {
+//RESERVAR
 
-};
+const addCar = (carId) => {};
