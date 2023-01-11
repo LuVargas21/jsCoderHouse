@@ -1,5 +1,6 @@
 const search = document.getElementById("input-text-find"),
 	btnSearch = document.getElementById("btn-find"),
+	btnBooking = document.getElementsByClassName("btn btn-card car-btn"),
 	containerCars = document.querySelector(".cars");
 
 const cars = [
@@ -215,11 +216,11 @@ function createHTML(array) {
 						<p class ="card-text">${car.brand}</p>
 						<p class ="card-text">Motor: ${car.motor}</p>
 					    <p class ="card-text">Categoria: ${car.category}</p>
-						<p class="card-text" > $${car.price}</p>		
+						<p class="card-text" > $${car.finalPrice}</p>		
 					</div>
 					
 					<div class="card-action">
-						<button type="button" class=" btn btn-card" id="${cars.id}">
+						<button type="button" class="btn btn-card car-btn" id="${car.id}">
 							Reservar
 						</button>
 					</div>
@@ -231,6 +232,10 @@ function createHTML(array) {
 }
 
 // call createHTML function
+let booking;
+
+initPriceBaseReservation();
+initCarPrices();
 createHTML(cars);
 
 //listener search
@@ -242,34 +247,55 @@ btnSearch.addEventListener("click", (e) => {
 	createHTML(filterElement);
 });
 
-let priceReservation;
-function lsReservation() {
-	localStorage.getItem("quotation");
-	priceReservation = JSON.parse(localStorage.getItem("quotation"));
+Array.from(btnBooking).forEach(function(e) {
+    e.addEventListener("click", function() {
+		createReservation(e.id);
+	});
+});
+
+let priceBaseReservation = 0;
+function initPriceBaseReservation() {
+	this.priceBaseReservation = JSON.parse(localStorage.getItem("quotation"));
+}
+
+function createReservation(idCar) {
+	let savedBasePrice = JSON.parse(localStorage.getItem("quotation"));
+	let savedSelectedCountry = JSON.parse(localStorage.getItem("selectedCountry"));
+	let savedSelectedCity = JSON.parse(localStorage.getItem("selectedCity"));
+	let savedQuantityDay = JSON.parse(localStorage.getItem("quantityDay"));
+	this.priceBaseReservation = savedBasePrice;
+
+	let car = this.getCarSelected(idCar)
+	this.booking = new Reservation(savedSelectedCountry, savedSelectedCity, car, savedQuantityDay, car.finalPrice);
+	localStorage.setItem("booking", booking);
 }
 
 //clase reserva
 class Reservation {
-	constructor(idCity, quantityDay, id, price) {
-		this.idCity = idCity;
+	constructor(country, city, car, quantityDay, price) {
+		this.country = country;
+		this.city = city;
+		this.car = car;
 		this.quantityDay = quantityDay;
-		this.id = id;
 		this.price = price;
-		this.reservation = reservation;
 	}
+
+	setCar(car) {
+        this.car = car;
+    }
+
+	setPrice(price) {
+        this.price = price;
+    }
 }
 
-function reservation(id, price) {
-	let basePriceCar = 0;
-	for (let i = 0; i < cars.length; i++) {
-		if (cars[i].id == id) {
-			cars[i].id.forEach((car) => {
-				if (car.id == price) {
-					basePriceCar = car.basePrice;
-				}
-			});
-		}
-	}
-	let reservation = basePriceCar + priceReservation;
-	return reservation;
+function initCarPrices() {
+	cars.forEach((car) => {
+		car.finalPrice = car.price + this.priceBaseReservation;
+	})
+}
+
+function getCarSelected(idCar) {
+	let car = cars.find(x => x.id == idCar);
+	return car;
 }

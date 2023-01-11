@@ -87,7 +87,7 @@ function startApp() {
 	let btnCalculator = document.getElementById("btnCalculator");
 	btnCalculator.addEventListener("click", (e) => {
 		e.preventDefault();
-		btnCalculator.addEventListener("click", clickBtnCalculator);
+		clickBtnCalculator();
 	});
 }
 
@@ -131,10 +131,15 @@ function validateFields(idCity, idCountry, quantityDay) {
 
 function quotation(idCountry, idCity, quantityDay) {
 	let basePrice = 0;
+	let selectedCountry;
+	let selectedCity;
+
 	for (let i = 0; i < countries.length; i++) {
 		if (countries[i].id == idCountry) {
 			countries[i].cities.forEach((city) => {
 				if (city.id == idCity) {
+					selectedCountry = countries[i];
+					selectedCity = city;
 					basePrice = city.basePrice;
 				}
 			});
@@ -142,6 +147,9 @@ function quotation(idCountry, idCity, quantityDay) {
 	}
 	let quotation = basePrice * quantityDay;
 	localStorage.setItem("quotation", quotation);
+	localStorage.setItem("selectedCountry", JSON.stringify(selectedCountry));
+	localStorage.setItem("selectedCity", JSON.stringify(selectedCity));
+	localStorage.setItem("quantityDay", quantityDay);
 	return quotation;
 }
 

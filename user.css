@@ -3,10 +3,7 @@
  body {
      font-family: 'Roboto Flex', sans-serif;
      background-color: rgba(255, 255, 255, 0);
-     opacity: 1;
-     background-image: radial-gradient(#01184A 0.8500000000000001px, transparent 0.8500000000000001px), radial-gradient(#01184A 0.8500000000000001px, rgba(255, 255, 255, 0) 0.8500000000000001px);
-     background-size: 34px 34px;
-     background-position: 0 0, 17px 17px;
+    
  }
 
  .form {
