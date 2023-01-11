@@ -1,3 +1,5 @@
+
+
 const search = document.getElementById("input-text-find"),
 	btnSearch = document.getElementById("btn-find"),
 	containerCars = document.querySelector(".cars");
@@ -9,7 +11,7 @@ const cars = [
 		brand: "Chevrolet ",
 		motor: "1.4",
 		category: "Economic",
-		img: "onix_id1.png",
+		img: "onix_id1.jfif",
 		price: 7000,
 		finalPrice: "",
 	},
@@ -109,7 +111,7 @@ const cars = [
 		brand: "Ford",
 		motor: "2.5",
 		category: "Premium",
-		img: "kuga_id11jpg.jpg",
+		img: "kuga_id11.jfif",
 		price: 12000,
 		finalPrice: " ",
 	},
@@ -119,7 +121,7 @@ const cars = [
 		brand: "VW",
 		motor: "2.0",
 		category: "Premium",
-		img: "tiguan_id12.png",
+		img: "tiguan_id12.jfif",
 		price: 12000,
 		finalPrice: " ",
 	},
@@ -129,7 +131,7 @@ const cars = [
 		brand: "Jeep",
 		motor: "1.7",
 		category: "Especial",
-		img: "renegade_id13.png",
+		img: "renegade_id13.jfif",
 		price: 15000,
 		finalPrice: " ",
 	},
@@ -204,17 +206,19 @@ function createHTML(array) {
 	let html;
 	containerCars.innerHTML = "";
 	for (const car of array) {
+		
 		html = `<div class="card-container">
 				<div class="card">
 					<div class="card-image">	
-					<img src="./images-cars/${car.img}" alt=""> 
-					<span class="card-title">${car.model}</span>
-						
+					 <img src="/images_cars/${car.img}" alt=""> 
+				
 					</div>
 					<div class="card-content">
-					    <p class ="card-text">${car.brand}</p>
-					    <p class ="card-text">${car.category}</p>
-						<p class="card-text" > $${car.price}</p>		
+					<span class="card-title">${car.model}</span>
+						<p class ="card-text">${car.brand}</p>
+						<p class ="card-text">Motor: ${car.motor}</p>
+					    <p class ="card-text">Categoria: ${car.category}</p>
+						<p class="card-text" > $${car.price }</p>		
 					</div>
 					
 					<div class="card-action">
