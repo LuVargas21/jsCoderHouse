@@ -141,7 +141,6 @@ function quotation(idCountry, idCity, quantityDay) {
 		}
 	}
 	let quotation = basePrice * quantityDay;
-	console.log("paso");
 	localStorage.setItem("quotation", quotation);
 	return quotation;
 }
@@ -189,4 +188,3 @@ endDateElem.addEventListener("change", (e) => {
 	document.getElementById("endDateSelected").innerText = endDateStrValue;
 });
 
-export { quotation };

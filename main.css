@@ -4,11 +4,6 @@
     --clr-main: #01184A;
     --clr-sec: #FD5F00;
     --clr-third: #FFCE08;
-    --clr-fourth: #1259B8;
-    --cl-fifth: #0FD4C4;
-
-
-
 }
 
 * {
@@ -17,6 +12,14 @@
     box-sizing: border-box;
     font-family: "Open Sans", sans-serif;
 
+}
+
+body {
+
+    background-image: url(./primeraEntrega/images/background.jpeg );
+    background-repeat: no-repeat;
+    position: relative;
+    min-height: 100vh;
 }
 
 h1,
@@ -67,18 +70,20 @@ a {
     transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
 }
 
+
+
 .btn {
-    margin: 3px;
+    background-color: #01184A;
     color: white;
-    background-color: var(--clr-main);
+    font-family: 'Roboto Flex', sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    padding: .8em .8em;
+    border: none;
+    border-radius: .5em;
 }
 
-/* 
-body {
 
-    background-image: url(./primeraEntrega/images/background.jpeg );
-    background-repeat: no-repeat;
-} */
 
 
 .containerBooking {
@@ -97,8 +102,9 @@ body {
 .containerDatePicker {
     align-items: center;
     padding: 24px 12px;
-    border-radius: 8px;
-    background-color: rgb(1, 24, 74);
+    margin-left: 120px;
+    border-radius: 10px;
+    background-color: rgba(250, 247, 243, 0.53);
     box-sizing: content-box;
     color: #999;
     width: fit-content;
@@ -127,7 +133,7 @@ body {
 .selection {
 
     padding: 8px 12px;
-    color: #999;
+    color: var(--clr-main);
     border-color: #999;
     border-radius: 5px;
 }
@@ -142,7 +148,8 @@ body {
 
 
 .form-control {
-    color: #999;
+    color: var(--clr-main);
+    margin-bottom: 20px;
 }
 
 .logoIcon {
@@ -156,7 +163,12 @@ body {
 }
 
 .textTitle {
+    color: #676b6e;
     font-size: 20px;
+}
+
+label {
+    color: #676b6e;
 }
 
 .main {
@@ -167,18 +179,18 @@ body {
     padding: 2rem;
 }
 
-.text1 {
-    color: #999;
-}
-
 .btnDate {
     font-weight: 300;
     border-radius: .5rem;
 }
 
 .footer {
+
     grid-area: footer;
     display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 .containerFooter {

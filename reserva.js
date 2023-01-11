@@ -1,5 +1,3 @@
-
-
 const search = document.getElementById("input-text-find"),
 	btnSearch = document.getElementById("btn-find"),
 	containerCars = document.querySelector(".cars");
@@ -206,7 +204,6 @@ function createHTML(array) {
 	let html;
 	containerCars.innerHTML = "";
 	for (const car of array) {
-		
 		html = `<div class="card-container">
 				<div class="card">
 					<div class="card-image">	
@@ -218,7 +215,7 @@ function createHTML(array) {
 						<p class ="card-text">${car.brand}</p>
 						<p class ="card-text">Motor: ${car.motor}</p>
 					    <p class ="card-text">Categoria: ${car.category}</p>
-						<p class="card-text" > $${car.price }</p>		
+						<p class="card-text" > $${car.price}</p>		
 					</div>
 					
 					<div class="card-action">
@@ -245,6 +242,34 @@ btnSearch.addEventListener("click", (e) => {
 	createHTML(filterElement);
 });
 
-//RESERVAR
+let priceReservation;
+function lsReservation() {
+	localStorage.getItem("quotation");
+	priceReservation = JSON.parse(localStorage.getItem("quotation"));
+}
 
-const addCar = (carId) => {};
+//clase reserva
+class Reservation {
+	constructor(idCity, quantityDay, id, price) {
+		this.idCity = idCity;
+		this.quantityDay = quantityDay;
+		this.id = id;
+		this.price = price;
+		this.reservation = reservation;
+	}
+}
+
+function reservation(id, price) {
+	let basePriceCar = 0;
+	for (let i = 0; i < cars.length; i++) {
+		if (cars[i].id == id) {
+			cars[i].id.forEach((car) => {
+				if (car.id == price) {
+					basePriceCar = car.basePrice;
+				}
+			});
+		}
+	}
+	let reservation = basePriceCar + priceReservation;
+	return reservation;
+}
