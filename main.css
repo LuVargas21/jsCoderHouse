@@ -1,8 +1,10 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css");
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&family=Roboto+Flex:opsz,wght@8..144,200;8..144,300;8..144,400&display=swap');
+
 
 :root {
     --clr-main: #01184A;
-    --clr-sec: #FD5F00;
+
     --clr-third: #FFCE08;
 }
 
@@ -10,12 +12,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Open Sans", sans-serif;
+  
 
 }
 
 body {
-
+    font-family: 'Quicksand', sans-serif;
     background-image: url(./primeraEntrega/images/background.jpeg );
     background-repeat: no-repeat;
     position: relative;
@@ -43,7 +45,7 @@ ul {
 
 a {
     text-decoration: none;
-    color: black;
+    color: rgb(66, 65, 65);
 }
 
 .navBar {
@@ -66,10 +68,9 @@ a {
 }
 
 .bi {
-    color: rgb(0, 0, 0);
+    color: rgb(66, 65, 65);
     transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
 }
-
 
 
 .btn {
@@ -82,9 +83,6 @@ a {
     border: none;
     border-radius: .5em;
 }
-
-
-
 
 .containerBooking {
     padding-top: 15px;
@@ -100,15 +98,14 @@ a {
 }
 
 .containerDatePicker {
-    align-items: center;
-    padding: 24px 12px;
-    margin-left: 120px;
-    border-radius: 10px;
     background-color: rgba(250, 247, 243, 0.53);
-    box-sizing: content-box;
-    color: #999;
-    width: fit-content;
-
+    margin: auto;
+    width: 90%;
+    max-width: 600px;
+    margin-top: 20px;
+    padding: 30px 30px;
+    border-radius: 10px;
+    text-align: center;
 }
 
 .containerReservation {
@@ -158,17 +155,14 @@ a {
 
 }
 
-.mainTitle {
-    color: var(--clr-main);
-}
 
 .textTitle {
-    color: #676b6e;
+    color: #999;
     font-size: 20px;
 }
 
 label {
-    color: #676b6e;
+    color: var(--clr-main);
 }
 
 .main {
@@ -185,10 +179,8 @@ label {
 }
 
 .footer {
-
     grid-area: footer;
     display: block;
-    position: absolute;
     bottom: 0;
     width: 100%;
 }

@@ -1,16 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,200;8..144,300;8..144,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&family=Roboto+Flex:opsz,wght@8..144,200;8..144,300;8..144,400&display=swap');
 
 body {
-    font-family: 'Roboto Flex', sans-serif;
-    background-color: rgba(255, 255, 255, 0);
-    opacity: 1;
-    background-image: radial-gradient(#01184A 0.8500000000000001px, transparent 0.8500000000000001px), radial-gradient(#01184A 0.8500000000000001px, rgba(255, 255, 255, 0) 0.8500000000000001px);
-    background-size: 34px 34px;
-    background-position: 0 0, 17px 17px;
+    font-family: 'Quicksand', sans-serif;
+
 }
 
 .formRegister{
-    background-color: white;
+ background-color:rgb(255 255 255/70%);   
     margin: auto;
     width: 90%;
     max-width: 500px;
@@ -35,6 +32,7 @@ body {
 }
 
 .formGroup {
+    
     position: relative;
     margin-top: 6px;
     color: #01184A;
@@ -42,7 +40,6 @@ body {
 
 .formInput {
     width: 100%;
-    background: white;
     color: #01184A;
     font-size: 1rem;
     margin-top: 6px;
@@ -53,14 +50,13 @@ body {
 
 }
 
-.fomrLabel {
+.formRegister .fomrLabel {
     color: #01184A;
     cursor: pointer;
     position: absolute;
     top: 0;
     left: 5px;
-    transform: translateY(10px);
-    transition: transform .5s, color .3s;
+ 
 }
 
 

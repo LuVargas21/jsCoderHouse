@@ -11,7 +11,7 @@ const cars = [
 		motor: "1.4",
 		category: "Economic",
 		img: "onix_id1.jfif",
-		price: 7000,
+		price: 7500,
 		finalPrice: "",
 	},
 	{
@@ -21,7 +21,7 @@ const cars = [
 		motor: "1.6",
 		category: "Economic",
 		img: "goltrend_id2.jfif",
-		price: 7000,
+		price: 7200,
 		finalPrice: " ",
 	},
 	{
@@ -31,7 +31,7 @@ const cars = [
 		motor: "1.6",
 		category: "Economic",
 		img: "clio_id3.jfif",
-		price: 7000,
+		price: 7300,
 		finalPrice: " ",
 	},
 	{
@@ -41,7 +41,7 @@ const cars = [
 		motor: "1.6",
 		category: "Economic",
 		img: "march_id4.jfif",
-		price: 7000,
+		price: 7900,
 		finalPrice: " ",
 	},
 	{
@@ -51,7 +51,7 @@ const cars = [
 		motor: "1.6",
 		category: "Intermedio",
 		img: "versa_id5.jfif",
-		price: 10000,
+		price: 10300,
 		finalPrice: " ",
 	},
 	{
@@ -61,7 +61,7 @@ const cars = [
 		motor: "1.8",
 		category: "Intermedio",
 		img: "cobalt_id6.jfif",
-		price: 10000,
+		price: 10600,
 		finalPrice: " ",
 	},
 	{
@@ -71,7 +71,7 @@ const cars = [
 		motor: "1.6",
 		category: "Intermedio",
 		img: "prisma_id7.jfif",
-		price: 10000,
+		price: 11600,
 		finalPrice: " ",
 	},
 	{
@@ -81,7 +81,7 @@ const cars = [
 		motor: "2.0",
 		category: "Intermedio",
 		img: "duster_id8.jpg",
-		price: 10000,
+		price: 11300,
 		finalPrice: " ",
 	},
 	{
@@ -91,7 +91,7 @@ const cars = [
 		motor: "1.6",
 		category: "Premium",
 		img: "kicks_id9.jfif",
-		price: 12000,
+		price: 12900,
 		finalPrice: " ",
 	},
 	{
@@ -101,7 +101,7 @@ const cars = [
 		motor: "1.6",
 		category: "Premium",
 		img: "yaris_id10.jfif",
-		price: 12000,
+		price: 13200,
 		finalPrice: " ",
 	},
 	{
@@ -111,7 +111,7 @@ const cars = [
 		motor: "2.5",
 		category: "Premium",
 		img: "kuga_id11.jfif",
-		price: 12000,
+		price: 13300,
 		finalPrice: " ",
 	},
 	{
@@ -121,7 +121,7 @@ const cars = [
 		motor: "2.0",
 		category: "Premium",
 		img: "tiguan_id12.jfif",
-		price: 12000,
+		price: 12700,
 		finalPrice: " ",
 	},
 	{
@@ -131,7 +131,7 @@ const cars = [
 		motor: "1.7",
 		category: "Especial",
 		img: "renegade_id13.jfif",
-		price: 15000,
+		price: 16000,
 		finalPrice: " ",
 	},
 	{
@@ -141,7 +141,7 @@ const cars = [
 		motor: "3.8",
 		category: "Especial",
 		img: "frontier_id14.jfif",
-		price: 15000,
+		price: 16800,
 		finalPrice: " ",
 	},
 	{
@@ -151,7 +151,7 @@ const cars = [
 		motor: "2.5",
 		category: "Especial",
 		img: "ranger_id15.jfif",
-		price: 15000,
+		price: 16300,
 		finalPrice: " ",
 	},
 
@@ -162,7 +162,7 @@ const cars = [
 		motor: "2.5",
 		category: "Especial",
 		img: "amarok_id16.jfif",
-		price: 15000,
+		price: 16400,
 		finalPrice: " ",
 	},
 ];
