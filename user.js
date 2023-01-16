@@ -19,6 +19,9 @@ function startSession(users) {
 	} else {
 		document.querySelector("#message").innerText = "Usuario no encontrado";
 	}
+
+	//sugar syntax 
+	// if userFound ? window.location.assign("http://127.0.0.1:5500/booking.html") : document.querySelector("#message").innerText = "Usuario no encontrado"SS
 }
 
 // recover user
@@ -35,4 +38,3 @@ btn_login_user.addEventListener("click", (e) => {
 	e.preventDefault;
 	startSession(usersLS);
 });
-
