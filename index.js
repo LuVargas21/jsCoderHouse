@@ -92,18 +92,17 @@ function startApp() {
 }
 
 function clickBtnCalculator() {
-	//get the  value of element select "country". Storage in a variable
+	//get the  value of element selected. Storage in a variable
 	let idCountry = countrySelect.value;
-
-	// get the  value of element select "city". Storage in a variable
-	let idCity = citySelect.value; //value of ""select"
-
-	let quantityDay = getQuantityDays();
+	let idCity = citySelect.value;
+	let startDate = DateTime.fromISO(document.getElementById("startDate").value);
+	let endDate = DateTime.fromISO(document.getElementById("endDate").value);
+	let quantityDay = calculateStay(startDate, endDate);
 	let isValid = validateFields(idCity, idCountry, quantityDay);
 	if (isValid) {
 		let quotationResult = quotation(idCountry, idCity, quantityDay);
 		document.getElementById("priceResult").innerHTML = Swal.fire({
-			title: "El precio base para tu destino es de " + quotationResult,
+			title: `La cantidad de dias seleccionados son ${quantityDay} y el precio base de $${quotationResult}`,
 			icon: "info",
 			html:
 				'<a href="http://127.0.0.1:5500/reserva.html"links</a> ' +
@@ -113,7 +112,7 @@ function clickBtnCalculator() {
 }
 
 // validates the  input value bigger than 0.
-function validateFields(idCity, idCountry, quantityDay) {
+function validateFields(idCity) {
 	let isValid = true;
 	if (idCity <= 0) {
 		Swal.fire(
@@ -153,46 +152,66 @@ function quotation(idCountry, idCity, quantityDay) {
 	return quotation;
 }
 
-function getQuantityDays() {
-	let startDateStrValue = startDateElem.value;
-	let endDateStrValue = endDateElem.value;
+// function getQuantityDays() {
+// 	let startDateStrValue = startDateElem.value;
+// 	let endDateStrValue = endDateElem.value;
 
-	// Supongamos que hemos seleccionado las fechas de inicio y fin utilizando un datepicker y las hemos almacenado en las variables "startDate" y "endDate"
+// 	//parsear las fechas para convertirlas en un objeto
 
-	//parsear las fechas para convertirlas en un objeto
+// 	let parseDateStart = Date.parse(startDateStrValue);
+// 	let dateStart = new Date(parseDateStart);
 
-	let parseDateStart = Date.parse(startDateStrValue);
-	let dateStart = new Date(parseDateStart);
+// 	let parseDateEnd = Date.parse(endDateStrValue);
+// 	let dateEnd = new Date(parseDateEnd);
 
-	let parseDateEnd = Date.parse(endDateStrValue);
-	let dateEnd = new Date(parseDateEnd);
+// 	// Obtenemos la cantidad de milisegundos transcurridos desde la fecha de referencia (01 de enero de 1970) hasta la fecha de inicio y fin
+// 	let startTime = dateStart.getTime();
+// 	let endTime = dateEnd.getTime();
 
-	// Obtenemos la cantidad de milisegundos transcurridos desde la fecha de referencia (01 de enero de 1970) hasta la fecha de inicio y fin
-	let startTime = dateStart.getTime();
-	let endTime = dateEnd.getTime();
+// 	// Calculamos la diferencia entre las dos fechas en milisegundos
+// 	let difference = endTime - startTime;
 
-	// Calculamos la diferencia entre las dos fechas en milisegundos
-	let difference = endTime - startTime;
+// 	// Dividimos la diferencia entre la cantidad de milisegundos en un día para obtener la cantidad de días
+// 	let days = difference / 86400000 + 1;
 
-	// Dividimos la diferencia entre la cantidad de milisegundos en un día para obtener la cantidad de días
-	let days = difference / 86400000 + 1;
+// 	// Mostramos el resultado en la consola
+// 	console.log(days + " días seleccionados");
+// 	return days;
+// }
 
-	// Mostramos el resultado en la consola
-	console.log(days + " días seleccionados");
-	return days;
+// // get the input "dates"
+// let startDateElem = document.getElementById("startDate");
+// let endDateElem = document.getElementById("endDate");
+
+// startDateElem.addEventListener("change", (e) => {
+// 	startDateStrValue = e.target.value;
+// 	document.getElementById("startDateSelected").innerText = startDateStrValue;
+// });
+
+// endDateElem.addEventListener("change", (e) => {
+// 	endDateStrValue = e.target.value;
+// 	document.getElementById("endDateSelected").innerText = endDateStrValue;
+// });
+// get days selected using luxor library
+const DateTime = luxon.DateTime;
+
+let nowDate = DateTime.now();
+console.log(nowDate.toString());
+console.log(nowDate.toLocaleString(DateTime.DATETIME_FULL));
+console.log(
+	nowDate.setLocale("es").toLocaleString(DateTime.TIME_24_WITH_SECONDS)
+);
+
+let dates = document.querySelectorAll('input[type="date"]');
+let startDate = DateTime.now().toFormat("yyyy-MM-dd");
+let endDate = DateTime.now().plus({ months: 5 }).toFormat("yyyy-MM-dd");
+
+dates.forEach((el) => {
+	el.setAttribute("min", startDate);
+	el.setAttribute("max", endDate);
+});
+
+function calculateStay(startDate, endDate) {
+	let total = endDate.diff(startDate);
+	return total.as("days");
 }
-
-// get the input "dates"
-let startDateElem = document.getElementById("startDate");
-let endDateElem = document.getElementById("endDate");
-
-startDateElem.addEventListener("change", (e) => {
-	startDateStrValue = e.target.value;
-	document.getElementById("startDateSelected").innerText = startDateStrValue;
-});
-
-endDateElem.addEventListener("change", (e) => {
-	endDateStrValue = e.target.value;
-	document.getElementById("endDateSelected").innerText = endDateStrValue;
-});
-
