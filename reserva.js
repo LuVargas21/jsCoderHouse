@@ -308,10 +308,22 @@ function getCarSelected(idCar) {
 	return car;
 }
 
-// fetch
-fetch("./json/cars.json")
-	.then((res) => res.json())
-	.then((carData) => {
-		console.log(carData[3]);
-		createHTML(carData);
-	});
+// // fetch
+// fetch("./json/cars.json")
+// 	.then((res) => res.json())
+// 	.then((carData) => {
+// 		console.log(carData);
+// 		createHTML(carData);
+// 	});
+
+
+// async await 
+// async function fecthAPI(){
+// 	const response= await fetch('./json/cars.json');
+// 	const dataCar= await response.json();
+  
+// 	console.log(dataCar);
+// 	createHTML(dataCar);
+//   }
+//   fecthAPI()
+
