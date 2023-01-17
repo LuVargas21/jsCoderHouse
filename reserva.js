@@ -247,8 +247,8 @@ btnSearch.addEventListener("click", (e) => {
 	createHTML(filterElement);
 });
 
-Array.from(btnBooking).forEach(function(e) {
-    e.addEventListener("click", function() {
+Array.from(btnBooking).forEach(function (e) {
+	e.addEventListener("click", function () {
 		createReservation(e.id);
 	});
 });
@@ -260,13 +260,21 @@ function initPriceBaseReservation() {
 
 function createReservation(idCar) {
 	let savedBasePrice = JSON.parse(localStorage.getItem("quotation"));
-	let savedSelectedCountry = JSON.parse(localStorage.getItem("selectedCountry"));
+	let savedSelectedCountry = JSON.parse(
+		localStorage.getItem("selectedCountry")
+	);
 	let savedSelectedCity = JSON.parse(localStorage.getItem("selectedCity"));
 	let savedQuantityDay = JSON.parse(localStorage.getItem("quantityDay"));
 	this.priceBaseReservation = savedBasePrice;
 
-	let car = this.getCarSelected(idCar)
-	this.booking = new Reservation(savedSelectedCountry, savedSelectedCity, car, savedQuantityDay, car.finalPrice);
+	let car = this.getCarSelected(idCar);
+	this.booking = new Reservation(
+		savedSelectedCountry,
+		savedSelectedCity,
+		car,
+		savedQuantityDay,
+		car.finalPrice
+	);
 	localStorage.setItem("booking", booking);
 }
 
@@ -281,21 +289,29 @@ class Reservation {
 	}
 
 	setCar(car) {
-        this.car = car;
-    }
+		this.car = car;
+	}
 
 	setPrice(price) {
-        this.price = price;
-    }
+		this.price = price;
+	}
 }
 
 function initCarPrices() {
 	cars.forEach((car) => {
 		car.finalPrice = car.price + this.priceBaseReservation;
-	})
+	});
 }
 
 function getCarSelected(idCar) {
-	let car = cars.find(x => x.id == idCar);
+	let car = cars.find((x) => x.id == idCar);
 	return car;
 }
+
+// fetch
+fetch("./json/cars.json")
+	.then((res) => res.json())
+	.then((carData) => {
+		console.log(carData[3]);
+		createHTML(carData);
+	});
