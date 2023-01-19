@@ -178,14 +178,14 @@ const search = document.getElementById("input-text-find"),
 let cars = [];
 
 fetch("./json/cars.json")
-.then(response => {
-   return response.json();
-})
-.then(carsData => {
-	console.log(carsData);
-	cars = carsData;
-	initializeFunctions();
-});
+	.then((response) => {
+		return response.json();
+	})
+	.then((carsData) => {
+		console.log(carsData);
+		cars = carsData;
+		initializeFunctions();
+	});
 
 let booking;
 
@@ -196,49 +196,35 @@ function initializeFunctions() {
 }
 
 // Practica
-// async await 
+// async await
 // async function fecthCarsAPI(){
 // 	const response = await fetch('./json/cars.json');
 // 	const carData = await response.json();
-  
+
 // 	console.log(carData);
 // 	return carData;
 // }
 
 // var initCars = async function(a, b) {
 // 	this.cars = await fecthCarsAPI();
-	
+
 // 	console.log(cars);
 // }
 
 // Start function
 // var start = async function(a, b) {
-// 	cars = await fecthCarsAPI();	
+// 	cars = await fecthCarsAPI();
 // 	console.log(this.cars);
 //   }
 
-	
 //filter cars
-
-// function arrayCarFilter(filter) {
-// 	let carFilter = cars.filter((elementCar) => {
-// 		return elementCar.motor.includes(filter);
-// 	});
-// 	return carFilter;
-// }
-// function arrayCarFilter(filter) {
-// 	let carFilter = cars.filter((elementCar) => {
-// 		return elementCar.brand.includes(filter);
-// 	});
-// 	return carFilter;
-// }
-
 function arrayCarFilter(filter) {
 	let carFilter = cars.filter((elementCar) => {
 		return elementCar.model.toLowerCase().includes(filter.toLowerCase());
 	});
 	return carFilter;
 }
+
 
 //create HTML
 function createHTML(array) {
@@ -279,6 +265,8 @@ btnSearch.addEventListener("click", (e) => {
 	createHTML(filterElement);
 });
 
+
+//Reservation 
 Array.from(btnBooking).forEach(function (e) {
 	e.addEventListener("click", function () {
 		createReservation(e.id);
