@@ -152,46 +152,6 @@ function quotation(idCountry, idCity, quantityDay) {
 	return quotation;
 }
 
-// function getQuantityDays() {
-// 	let startDateStrValue = startDateElem.value;
-// 	let endDateStrValue = endDateElem.value;
-
-// 	//parsear las fechas para convertirlas en un objeto
-
-// 	let parseDateStart = Date.parse(startDateStrValue);
-// 	let dateStart = new Date(parseDateStart);
-
-// 	let parseDateEnd = Date.parse(endDateStrValue);
-// 	let dateEnd = new Date(parseDateEnd);
-
-// 	// Obtenemos la cantidad de milisegundos transcurridos desde la fecha de referencia (01 de enero de 1970) hasta la fecha de inicio y fin
-// 	let startTime = dateStart.getTime();
-// 	let endTime = dateEnd.getTime();
-
-// 	// Calculamos la diferencia entre las dos fechas en milisegundos
-// 	let difference = endTime - startTime;
-
-// 	// Dividimos la diferencia entre la cantidad de milisegundos en un día para obtener la cantidad de días
-// 	let days = difference / 86400000 + 1;
-
-// 	// Mostramos el resultado en la consola
-// 	console.log(days + " días seleccionados");
-// 	return days;
-// }
-
-// // get the input "dates"
-// let startDateElem = document.getElementById("startDate");
-// let endDateElem = document.getElementById("endDate");
-
-// startDateElem.addEventListener("change", (e) => {
-// 	startDateStrValue = e.target.value;
-// 	document.getElementById("startDateSelected").innerText = startDateStrValue;
-// });
-
-// endDateElem.addEventListener("change", (e) => {
-// 	endDateStrValue = e.target.value;
-// 	document.getElementById("endDateSelected").innerText = endDateStrValue;
-// });
 // get days selected using luxor library
 const DateTime = luxon.DateTime;
 

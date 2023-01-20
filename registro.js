@@ -4,7 +4,7 @@ user_surname = document.querySelector("#surname");
 user_address = document.querySelector("#address");
 user_mail = document.querySelector("#mail");
 user_password = document.querySelector("#password");
-btnRegistrar = document.querySelector(".user_register");
+btnRegistrar = document.querySelector("#user_register");
 
 let users;
 if (localStorage.getItem("users")) {
@@ -43,8 +43,9 @@ function storeOnLS(elementUser) {
 }
 
 //event
+
 btnRegistrar.addEventListener("click", (e) => {
-	e.preventDefault;
+	e.addEventListener;
 	let newUser = new User(
 		user_name.value,
 		user_surname.value,
@@ -52,8 +53,37 @@ btnRegistrar.addEventListener("click", (e) => {
 		user_address.value,
 		user_password.value
 	);
+
 	console.log(newUser);
 	storeUser(newUser); //va a pushear el user al array
 	storeOnLS(users);
+	promess;
 });
+
+let newUser = new User();
+const promess = new Promise((resolve, reject) => {
+	if (newUser !== " ") {
+		resolve();
+	} else {
+		reject();
+	}
+});
+
+promess
+	.then(() => {
+		Swal.fire({
+			position: "center",
+			icon: "success",
+			title: "¡Usuario creado exitosamente!",
+			showConfirmButton: false,
+			timer: 2000,
+		});
+	})
+	.catch(() => {
+		Swal.fire({
+			title: "¡Error!",
+			text: "Por favor completa todos los campos del formulario",
+			icon: "error",
+		});
+	});
 

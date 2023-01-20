@@ -15,7 +15,7 @@ function startSession(users) {
 	});
 	// if userFound  redireccionar a la pagina siguiente
 	if (userFound) {
-		// window.location.assign("http://127.0.0.1:5500/reserva.html");
+		 window.location.assign("http://127.0.0.1:5500/booking.html");
 	} else {
 		document.querySelector("#message").innerText = "Usuario no encontrado";
 	}
