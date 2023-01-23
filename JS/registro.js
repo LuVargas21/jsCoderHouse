@@ -55,7 +55,7 @@ btnRegistrar.addEventListener("click", (e) => {
 	);
 
 	console.log(newUser);
-	storeUser(newUser); //va a pushear el user al array
+	storeUser(newUser);
 	storeOnLS(users);
 	promess;
 });
@@ -72,11 +72,10 @@ const promess = new Promise((resolve, reject) => {
 promess
 	.then(() => {
 		Swal.fire({
-			position: "center",
 			icon: "success",
 			title: "¡Usuario creado exitosamente!",
-			showConfirmButton: false,
-			timer: 2000,
+			text: "",
+			footer: '<a href="/HTML/reserva.html">Volver a la página de reservas </a>',
 		});
 	})
 	.catch(() => {
@@ -86,4 +85,3 @@ promess
 			icon: "error",
 		});
 	});
-

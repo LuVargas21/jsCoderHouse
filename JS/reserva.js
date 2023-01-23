@@ -177,7 +177,7 @@ const search = document.getElementById("input-text-find"),
 // 	});
 let cars = [];
 
-fetch("./json/cars.json")
+fetch("/json/cars.json")
 	.then((response) => {
 		return response.json();
 	})
@@ -194,28 +194,6 @@ function initializeFunctions() {
 	initCarPrices();
 	createHTML(cars);
 }
-
-// Practica
-// async await
-// async function fecthCarsAPI(){
-// 	const response = await fetch('./json/cars.json');
-// 	const carData = await response.json();
-
-// 	console.log(carData);
-// 	return carData;
-// }
-
-// var initCars = async function(a, b) {
-// 	this.cars = await fecthCarsAPI();
-
-// 	console.log(cars);
-// }
-
-// Start function
-// var start = async function(a, b) {
-// 	cars = await fecthCarsAPI();
-// 	console.log(this.cars);
-//   }
 
 //filter cars
 function arrayCarFilter(filter) {
@@ -247,7 +225,7 @@ function createHTML(array) {
 					
 					<div class="card-action">
 						<button type="button" class="btn btn-card car-btn" id="${car.id}">
-							Reservar
+							Seleccionar
 						</button>
 					</div>
 					

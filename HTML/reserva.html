@@ -7,10 +7,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <!--favicon-->
-        <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
-        <link rel="manifest" href="favicon_io/site.webmanifest">
+        <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png">
+        <link rel="manifest" href="/favicon_io/site.webmanifest">
 
         <!--fontfamily-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,10 +22,11 @@
             href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&family=Roboto+Flex:opsz,wght@8..144,200;8..144,300;8..144,400&display=swap"
             rel="stylesheet">
         <!--Bootstrap and styles-->
-        <link rel="stylesheet" href="./CSS/reserva.css">
-        <link rel="stylesheet" href="primeraEntrega/Pluggin/bootstrap-5.2.2-dist/css/bootstrap.css">
-        <link rel="stylesheet" href="reserva.css">
+        <link rel="stylesheet" href="/CSS/reservaCard.css">
 
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <link rel="stylesheet" href="/CSS/reserva.css">
 
         <title> Travel Rent Car | Reservas</title>
     </head>
@@ -39,7 +40,8 @@
 
             <nav class="navbar navbar-expand-lg">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="index.html"> <img src="favicon_io/favicon-32x32.png" alt="logo mundo">
+                    <a class="navbar-brand" href="/HTML/index.html"> <img src="/favicon_io/favicon-32x32.png"
+                            alt="logo mundo">
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -50,18 +52,18 @@
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
 
-                                <a class="nav-link active" aria-current="page" href="index.html"> <i
+                                <a class="nav-link active" aria-current="page" href="/HTML/index.html"> <i
                                         class="bi bi-house"></i>Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="user.html"> <i
+                                <a class="nav-link active" aria-current="page" href="/HTML/user.html"> <i
                                         class="bi bi-person-check"></i>Mi perfil</a>
                             </li>
 
                         </ul>
                         <form class="d-flex" role="search">
-                            <input id="input-text-find" class="form-control me-2" type="search" placeholder="Buscar por modelo"
-                                aria-label="Search">
+                            <input id="input-text-find" class="form-control me-2" type="search"
+                                placeholder="Buscar por modelo" aria-label="Search">
                             <button id="btn-find" class="btn btn-outline-success" type="submit">Buscar</button>
                         </form>
                     </div>
@@ -77,16 +79,16 @@
         <h1> Elegí el auto que mejor se adapte a tu necesidad </h1>
         <br>
 
-        <!-- autos-->
+        <!-- cars-->
         <section class="cars row row-cols-1 row-cols-md-4 g-4">
-            <!--contenido dinamico-->
+            <!-- dynamic content-->
 
         </section>
 
         <footer class="footer">
             <div class="containerFooter">
                 <div class="sectionIconLogo">
-                    <a href="./index.html">
+                    <a href="/HTML/index.html">
 
                     </a>
                     <p> <i class="bi bi-geo"></i> Humberto 1° 650 | Capitalinas | Córdoba </p>
@@ -128,11 +130,14 @@
             </div>
 
         </footer>
-
-        <!--Script de JS-->
-        <script src="reserva.js"> </script>
         <!--script de bootstrap-->
-        <script src="/primeraEntrega/Pluggin/bootstrap-5.2.2-dist/js/bootstrap.js"> </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+            crossorigin="anonymous"></script>
+        <!--Script de JS-->
+        <script src="/JS/reserva.js"> </script>
+
+
     </body>
 
 </html>
