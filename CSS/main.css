@@ -18,7 +18,7 @@
 
 body {
     font-family: 'Quicksand', sans-serif;
-    background-image: url(./primeraEntrega/images/background.jpeg );
+    background-image: url(/img/background.jpeg );
     background-repeat: no-repeat;
     position: relative;
     min-height: 100vh;
