@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+        <!--favicon-->
+        <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+        <link rel="manifest" href="favicon_io/site.webmanifest">
+
+
+
+    <!--fontfamily-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,200;8..144,300;8..144,400&display=swap"
+        rel="stylesheet">
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="primeraEntrega/Pluggin/bootstrap-5.2.2-dist/css/bootstrap.css">
+    <!--sweet alert-->
+    <link rel="stylesheet" href="sweetalert2.min.css">
+    <!--toastify-->
+    
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+    <!--styles-->
+    <link rel="stylesheet" href="/CSS/booking.css" />
+
+    <title> Travel Rent Car | Detalles de reserva</title>
+  </head>
+
+    <body>
+        
+        <div class="navBar">
+
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="/HTML/index.html"> <img src="favicon_io/favicon-32x32.png" alt="logo mundo">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+
+                                <a class="nav-link active" aria-current="page" href="/HTML/index.html"> <i
+                                        class="bi bi-house"></i>Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="/HTML/user.html"> <i
+                                        class="bi bi-person-check"></i>Mi perfil</a>
+                            </li>
+
+                        </ul>
+                      
+                    </div>
+                </div>
+            </nav>
+
+        </div>
+
+        <h1> Detalles de tu reserva </h1>
+        <table style="width:100%" class="tableReservation" id="table">
+            <thead>
+              <tr>
+                  <th>Destino</th>
+                  <th>Cantidad de días </th>
+                  <th>Modelo de auto</th>
+                  <th>Marca</th>
+                  <th>Precio total</th>
+                  <th></th>
+              </tr>
+            </thead>
+    
+            <tbody id="tableBody">
+              <!-- Contenido dinámico -->
+            </tbody>
+          </table>
+
+        <script src="/JS/booking.js"></script>
+    </body>
+
+</html>
