@@ -75,7 +75,7 @@ promess
 			icon: "success",
 			title: "¡Usuario creado exitosamente!",
 			text: "",
-			footer: '<a href="/HTML/reserva.html">Volver a la página de reservas </a>',
+			footer: '<a href="/HTML/booking.html"> <i class="bi bi-arrow-return-left"></i> Volver atrás </a>',
 		});
 	})
 	.catch(() => {

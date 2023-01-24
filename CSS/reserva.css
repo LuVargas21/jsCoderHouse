@@ -4,7 +4,6 @@
 :root {
     --clr-main: #01184A;
     --clr-third: #FFCE08;
-    @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css");
 }
 
 * {

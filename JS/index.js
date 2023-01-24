@@ -98,7 +98,8 @@ function clickBtnCalculator() {
 	let startDate = DateTime.fromISO(document.getElementById("startDate").value);
 	let endDate = DateTime.fromISO(document.getElementById("endDate").value);
 	let quantityDay = calculateStay(startDate, endDate);
-	let isValid = validateFields(idCity, idCountry, quantityDay);
+	let isValid = validateFields(idCity, quantityDay);
+
 	if (isValid) {
 		let quotationResult = quotation(idCountry, idCity, quantityDay);
 		document.getElementById("priceResult").innerHTML = Swal.fire({
@@ -112,7 +113,7 @@ function clickBtnCalculator() {
 }
 
 // validates the  input value bigger than 0.
-function validateFields(idCity) {
+function validateFields(idCity, quantityDay) {
 	let isValid = true;
 	if (idCity <= 0) {
 		Swal.fire(
@@ -122,8 +123,18 @@ function validateFields(idCity) {
 		);
 		isValid = false;
 	}
+
+	if (quantityDay <= 0) {
+		Swal.fire(
+			"",
+			"La fecha de devolución debe ser distinta a la fecha de recogida",
+			"warning"
+		);
+		isValid = false;
+	}
 	return isValid;
 }
+
 //iterates the array "countries", and compares the selected option with the idCountry.
 //iterates the array "cities" of each country.
 //When found the idCity compares with the id and acces to the method "basePrice"

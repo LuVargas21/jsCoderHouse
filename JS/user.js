@@ -1,3 +1,4 @@
+
 const user_login = document.querySelector("#login_user");
 user_name = document.querySelector("#loguin_name");
 user_mail = document.querySelector("#login_mail");
@@ -9,15 +10,24 @@ btn_login_user = document.querySelector("#btn_user_login");
 function startSession(users) {
 	let userFound = users.find((userLog) => {
 		return (
-			userLog.user_name == user_name.value &&
+			userLog.user_mail == user_mail.value &&
 			userLog.user_password == user_password.value
 		);
 	});
-	// if userFound  redireccionar a la pagina siguiente
 	if (userFound) {
-		 window.location.assign("http://127.0.0.1:5500/booking.html");
+		document.querySelector("#message").innerText = Swal.fire({
+			position: "center",
+			icon: "success",
+			title: "Hola" + user_name,
+			showConfirmButton: false,
+			timer: 1500,
+		});
 	} else {
-		document.querySelector("#message").innerText = "Usuario no encontrado";
+		document.querySelector("#message").innerText = Swal.fire(
+			"¡Ups! Usuario no encontrado",
+			"Por favor intenta nuevamente",
+			"error"
+		);
 	}
 }
 
@@ -36,3 +46,29 @@ btn_login_user.addEventListener("click", (e) => {
 	startSession(usersLS);
 });
 
+
+
+// let userOk = new User();
+// const promess = new Promise((resolve, reject) => {
+// 	if (userOk == userFound) {
+// 		resolve();
+// 	} else {
+// 		reject();
+// 	}
+// });
+
+// promess
+// 	.then(() => {
+// 		Swal.fire({
+// 			icon: "success",
+// 			title: "¡Bienvenido!",
+// 			text: "",
+// 		});
+// 	})
+// 	.catch(() => {
+// 		Swal.fire({
+// 			title: "¡Error!",
+// 			text: "Usuario no encontrado",
+// 			icon: "error",
+// 		});
+// 	});

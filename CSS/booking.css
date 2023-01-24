@@ -13,7 +13,22 @@
     font-family: 'Quicksand', sans-serif;
     text-decoration: none;
 }
+h1{
+    color: var(--clr-main);
+    
+}
+tr {
+    background-color: rgb(186, 183, 183);
+    color: var(--clr-main);
+   
+}
 
+th {
+    color: var(--clr-main);
+}
+h2 { 
+    color: #01184A;
+}
 
 .navBar {
     display: grid;
@@ -37,4 +52,15 @@
 .bi {
     color: rgb(66, 65, 65);
     transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+}
+
+.table_booking { 
+    background-color:rgb(255 255 255/70%);
+    border-radius: 8px;
+    box-shadow: 0 5px 10px -5px rgb(0 0 0/80%);
+    text-align: center; 
+}
+
+.containerBooking {
+    text-align: center;
 }
