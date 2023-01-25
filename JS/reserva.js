@@ -32,7 +32,6 @@ function arrayCarFilter(filter) {
 	return carFilter;
 }
 
-
 //create HTML
 function createHTML(array) {
 	let html;
@@ -71,8 +70,6 @@ btnSearch.addEventListener("click", (e) => {
 	console.log(filterElement);
 	createHTML(filterElement);
 });
-
-
 
 let priceBaseReservation = 0;
 function initPriceBaseReservation() {
@@ -130,11 +127,14 @@ function getCarSelected(idCar) {
 }
 
 function initCarListener() {
-	//Reservation 
+	//Reservation
 	Array.from(btnBooking).forEach(function (e) {
 		e.addEventListener("click", function () {
 			createReservation(e.id);
+			window.location.href = "http://127.0.0.1:5500/HTML/booking.html";
 		});
 	});
 }
+
+
 

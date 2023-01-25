@@ -47,28 +47,27 @@ btn_login_user.addEventListener("click", (e) => {
 });
 
 
+let userOk = new User();
+const promess = new Promise((resolve, reject) => {
+	if (userOk == userFound) {
+		resolve();
+	} else {
+		reject();
+	}
+});
 
-// let userOk = new User();
-// const promess = new Promise((resolve, reject) => {
-// 	if (userOk == userFound) {
-// 		resolve();
-// 	} else {
-// 		reject();
-// 	}
-// });
-
-// promess
-// 	.then(() => {
-// 		Swal.fire({
-// 			icon: "success",
-// 			title: "¡Bienvenido!",
-// 			text: "",
-// 		});
-// 	})
-// 	.catch(() => {
-// 		Swal.fire({
-// 			title: "¡Error!",
-// 			text: "Usuario no encontrado",
-// 			icon: "error",
-// 		});
-// 	});
+promess
+	.then(() => {
+		Swal.fire({
+			icon: "success",
+			title: "¡Bienvenido!",
+			text: "",
+		});
+	})
+	.catch(() => {
+		Swal.fire({
+			title: "¡Error!",
+			text: "Usuario no encontrado",
+			icon: "error",
+		});
+	});

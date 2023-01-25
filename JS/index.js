@@ -106,8 +106,8 @@ function clickBtnCalculator() {
 			title: `La cantidad de dias seleccionados son ${quantityDay} y el precio base de $${quotationResult}`,
 			icon: "info",
 			html:
-				'<a href="http://127.0.0.1:5500/HTML/reserva.html"</a> ' +
-				"ELEGIR MI AUTO!",
+				 '<a href="http://127.0.0.1:5500/HTML/reserva.html"</a> ' + 
+				"HACE CLICK PARA ELEGIR TU AUTO!", 
 		});
 	}
 }

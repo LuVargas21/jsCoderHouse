@@ -49,18 +49,26 @@ h2 {
     vertical-align: middle;
 }
 
-.bi {
-    color: rgb(66, 65, 65);
-    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
-}
-
-.table_booking { 
-    background-color:rgb(255 255 255/70%);
-    border-radius: 8px;
+.booking_card {
+    background-color: rgba(250, 247, 243, 0.53);
+    margin: auto;
+    width: 90%;
+    max-width: 500px;
+    margin-top:  20px ;
+    padding: 30px 30px;
+    border-radius: 10px;
     box-shadow: 0 5px 10px -5px rgb(0 0 0/80%);
-    text-align: center; 
+    text-align: left;
 }
 
-.containerBooking {
-    text-align: center;
+
+.btn {
+    background-color: #01184A;
+    color: white;
+    font-family: 'Roboto Flex', sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    padding:  1rem 1rem;
+    border: none;
+    border-radius: .5em;
 }
