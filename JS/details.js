@@ -30,35 +30,14 @@ function fillTable() {
   <div class="card" style="">
   <img class="card-img-top" src="/images_cars/${imageCar}"  alt="Card image">
   <div class="card-body">
-    <h5 class="card-title">Destino:  ${cityName}</h5>
+    <h5 class="card-title">Destino:   ${cityName}</h5>
     <h5 class="card-title">Cantidad de días:   ${daysBooking}</h5>
     <h5 class="card-title">Modelo:   ${carSelect}</h5>
     <h5 class="card-title">Marca:   ${carBrand}</h5>
     <h5 class="card-title">Categoría:   ${carCategory}</h5> 
     <h5 class="card-title-price">Precio Final:  $ ${finalPrice}</h5>
-    <button type="button"  class="btn btn-primary" id="btnFinalBooking">Reservar
-</button>
-	
 	</div>
   </div>
   `;
 	bookingCard.innerHTML = html;
-
-	let btnFinalBooking = document.getElementById("btnFinalBooking");
-
-	btnFinalBooking.addEventListener("click", function () {
-		var randomNumber = Math.floor(Math.random() * 999999) + 1;
-		Swal.fire({
-			title:
-				"¡Genial! Te enviaremos un mail con los detalles para continuar el pago.",
-			text:
-				"Para realizar la confirmación del pago y retirar tu auto te vamos a pedir este Token  " +
-				randomNumber,
-			icon: "success",
-		});
-
-		setTimeout(function () {
-			window.location.assign("http://127.0.0.1:5500/HTML/user.html");
-		}, 4000);
-	});
 }

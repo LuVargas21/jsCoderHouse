@@ -74,7 +74,7 @@ btnRegistrar.addEventListener("click", (e) => {
 			title: "¡Usuario creado exitosamente!",
 			text: "",
 			footer:
-				'<a href="   "> <i class="bi bi-arrow-return-left"></i> Volver atrás </a>',
+				'<a href="http://127.0.0.1:5500/HTML/user.html"> <i class="bi bi-arrow-return-left"></i> Volver atrás </a>',
 		});
 	} else {
 		Swal.fire({
