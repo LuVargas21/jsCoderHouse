@@ -1,7 +1,6 @@
 const register = document.querySelector(".register");
 user_name = document.querySelector("#name");
 user_surname = document.querySelector("#surname");
-user_address = document.querySelector("#address");
 user_mail = document.querySelector("#mail");
 user_password = document.querySelector("#password");
 btnRegistrar = document.querySelector("#user_register");
@@ -13,12 +12,27 @@ if (localStorage.getItem("users")) {
 	users = [];
 }
 
+//validate form
+function validateFieldsForm(user_register) {
+	let fields = user_register.querySelector("input");
+	let isValid = true;
+
+	for (let field of fields) {
+		if (!field.value || field.validity.valid === false) {
+			isValid = false;
+			field.classList.add("error");
+		} else {
+			field.classList.remove("error");
+		}
+	}
+	return isValid;
+}
+
 //user builder
 class User {
-	constructor(user_name, user_surname, user_mail, user_address, user_password) {
+	constructor(user_name, user_surname, user_mail, user_password) {
 		this.name = user_name;
 		this.surname = user_surname;
-		this.address = user_address;
 		this.mail = user_mail;
 		this.password = user_password;
 	}
@@ -28,7 +42,6 @@ class User {
 function cleanFields() {
 	user_name.value = "";
 	user_surname.value = "";
-	user_address.value = "";
 	user_mail.value = "";
 	user_password.value = "";
 }
@@ -45,43 +58,31 @@ function storeOnLS(elementUser) {
 //event
 
 btnRegistrar.addEventListener("click", (e) => {
-	e.addEventListener;
-	let newUser = new User(
-		user_name.value,
-		user_surname.value,
-		user_mail.value,
-		user_address.value,
-		user_password.value
-	);
+	e.preventDefault();
+	if (validateFieldsForm(register)) {
+		let newUser = new User(
+			user_name.value,
+			user_surname.value,
+			user_mail.value,
+			user_password.value
+		);
 
-	console.log(newUser);
-	storeUser(newUser);
-	storeOnLS(users);
-	promess;
-});
-
-let newUser = new User();
-const promess = new Promise((resolve, reject) => {
-	if (newUser !== " ") {
-		resolve();
-	} else {
-		reject();
-	}
-});
-
-promess
-	.then(() => {
+		cleanFields();
+		storeUser(newUser);
+		storeOnLS(users);
+		
 		Swal.fire({
 			icon: "success",
 			title: "¡Usuario creado exitosamente!",
 			text: "",
-			footer: '<a href="   "> <i class="bi bi-arrow-return-left"></i> Volver atrás </a>',
+			footer:
+				'<a href="   "> <i class="bi bi-arrow-return-left"></i> Volver atrás </a>',
 		});
-	})
-	.catch(() => {
+	} else {
 		Swal.fire({
 			title: "¡Error!",
 			text: "Por favor completa todos los campos del formulario",
 			icon: "error",
 		});
-	});
+	}
+});

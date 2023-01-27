@@ -58,25 +58,22 @@
                     <h2 class="registerTitle">Completa el formulario y registrate.</h2>
                 </div>
                 <div class="formGroup">
-                    <label for="user_name" class="formLabel">Nombre</label>
-                    <input type="text" class="formInput" id="name" name="user_name" placeholder=" ">
+                    <label for="user_name" class="formLabel">Nombre y Apellido</label>
+                    <input type="text" class="formInput" id="name" name="user_name" placeholder=" " required>
                 </div>
                 <div class="formGroup">
-                    <label for="user_surname" class="formLabel">Apellido</label>
-                    <input type="text" class="formInput" id="surname" name="user_surname" placeholder=" ">
+                    <label for="user_surname" class="formLabel">Usuario</label>
+                    <input type="text" class="formInput" id="surname" name="user_surname" placeholder=" " required>
                 </div>
-                <div class="formGroup">
-                    <label for="user_address" class="formLabel">Dirección</label>
-                    <input type="text" class="formInput" id="address" name="user_address" placeholder=" ">
-                </div>
+              
                 <div class="formGroup">
                     <label for="user_mail" class="formLabel">Correo electrónico</label>
-                    <input type="email" class="formInput" id="mail" name="user_mail">
+                    <input type="email" class="formInput" id="mail" name="user_mail" required >
                 </div>
                 <div class="formGroup">
                     <label for="user_password" class="formLabel">Contraseña</label>
                     <input type="password" class="formInput" id="password" name="user_password"
-                        autocomplete="new-password">
+                        autocomplete="new-password" required>
                 </div>
 
                 <button type="submit" class="formBtn" name="register" id="user_register"> Crear Usuario </button>

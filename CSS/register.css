@@ -9,14 +9,16 @@ body {
  background-color:rgb(255 255 255/70%);   
     margin: auto;
     width: 90%;
-    max-width: 500px;
+    max-width: 400px;
     margin-top:  20px ;
     padding: 5px 30px;
     border-radius: 8px;
-    box-shadow: 0 5px 10px -5px rgb(0 0 0/30%);
+    box-shadow: 0 5px 10px -5px rgb(0 0 0/80%);
     text-align: center;
 }
-
+h2 {
+    font-size: 25px;
+}
 .registerTitle {
     font-size: rem;
     margin-bottom: .5em;
