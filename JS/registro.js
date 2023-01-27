@@ -12,20 +12,20 @@ if (localStorage.getItem("users")) {
 	users = [];
 }
 
-//validate form
-function validateFieldsForm(user_register) {
-	let fields = user_register.querySelector("input");
-	let isValid = true;
+function validateForm() {
+	let formFields = [user_name, user_surname, user_mail, user_password];
+	let isFormValid = true;
 
-	for (let field of fields) {
-		if (!field.value || field.validity.valid === false) {
-			isValid = false;
-			field.classList.add("error");
+	formFields.forEach((field) => {
+		if (!field.value) {
+			isFormValid = false;
+			field.classList.add("invalid");
 		} else {
-			field.classList.remove("error");
+			field.classList.remove("invalid");
 		}
-	}
-	return isValid;
+	});
+
+	return isFormValid;
 }
 
 //user builder
@@ -59,7 +59,7 @@ function storeOnLS(elementUser) {
 
 btnRegistrar.addEventListener("click", (e) => {
 	e.preventDefault();
-	if (validateFieldsForm(register)) {
+	if (validateForm()) {
 		let newUser = new User(
 			user_name.value,
 			user_surname.value,
@@ -67,10 +67,8 @@ btnRegistrar.addEventListener("click", (e) => {
 			user_password.value
 		);
 
-		cleanFields();
 		storeUser(newUser);
 		storeOnLS(users);
-		
 		Swal.fire({
 			icon: "success",
 			title: "¡Usuario creado exitosamente!",
@@ -80,9 +78,9 @@ btnRegistrar.addEventListener("click", (e) => {
 		});
 	} else {
 		Swal.fire({
-			title: "¡Error!",
-			text: "Por favor completa todos los campos del formulario",
-			icon: "error",
+					title: "¡Error!",
+					text: "Por favor completa todos los campos del formulario",
+					icon: "error",
 		});
 	}
 });

@@ -6,9 +6,10 @@ user_checkbox = document.querySelector("#login_checkBox");
 btn_login_user = document.querySelector("#btn_user_login");
 mesagge = document.querySelector("#message");
 // login function
+let userFound;
 function startSession(users) {
 	let userFound = users.find(user => {
-		return user.user_mail == user_mail.value && user.user_password == user_password.value;
+		return user.mail == user_mail.value && user.password == user_password.value;
 	});
 	if (userFound) {
 		alert ("buenas buenaaaas")
